@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+
+let homeTitle = "Welcome User"
+
+
+// check if user is logged in, if not go to onboarding, if yes go to home
+// bisa store color di dtabase/ ganti dri string ke Color --> store as HEX
+
