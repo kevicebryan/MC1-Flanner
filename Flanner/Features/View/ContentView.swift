@@ -8,17 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-  @StateObject private var activityListVM = ActivityListViewModel()
-
-  func deleteActivity(at offsets: IndexSet) {
-    offsets.forEach {
-      index in
-      let a = activityListVM.activites[index]
-      activityListVM.delete(a)
-    }
-    activityListVM.getAllActivity()
-  }
-
   var body: some View {
     VStack {
       Image(systemName: "globe")
