@@ -25,18 +25,17 @@ class CoreDataManager {
     }
   }
 
-//  CRUD Activity -- g kepake harusny...
-  func getActivitybyId(id: NSManagedObjectID) -> Activity? {
+//  CRUD Task -- g kepake harusny...
+  func getTaskById(id: NSManagedObjectID) -> Task? {
     do {
-      return try viewContext.existingObject(with: id) as? Activity
+      return try viewContext.existingObject(with: id) as? Task
     } catch {
       return nil
     }
   }
 
-  func getAllActivity() -> [Activity] {
-    let req: NSFetchRequest<Activity> = Activity.fetchRequest()
-
+  func getAllTask() -> [Task] {
+    let req: NSFetchRequest<Task> = Task.fetchRequest()
     do {
       return try viewContext.fetch(req)
     } catch {
@@ -45,13 +44,13 @@ class CoreDataManager {
     }
   }
 
-  func addActivity(text: String) {
-    let newActivity = Activity(context: viewContext)
+  func addTask(text: String) {
+    let newActivity = Task(context: viewContext)
     newActivity.name = text
   }
 
-  func deleteActivity(activity: Activity) {
-    viewContext.delete(activity)
+  func deleteTask(task: Task) {
+    viewContext.delete(task)
     save()
   }
 
