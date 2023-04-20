@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
+  @State var currIdx: Int = 0
+
   var body: some View {
-    NavigationView {}
+    VStack {
+      HStack(spacing: 0) {}
+
+      SnapCarousel(index: $currIdx, items: dummyTasks) {
+        task in
+        GeometryReader {
+          _ in
+          CarouselCard(task: task)
+        }
+      }.padding(.vertical, 40)
+    }.frame(maxHeight: .infinity, alignment: .top)
   }
 }
 
