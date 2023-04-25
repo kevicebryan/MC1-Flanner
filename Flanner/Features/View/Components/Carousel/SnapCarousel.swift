@@ -90,12 +90,12 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
               index = max(min(currIdx + Int(roundIndex), list.count - 1), 0)
             }
           )
-      }.animation(.easeInOut, value: offset == 0)
+      }.animation(.easeInOut, value: offset == 0).padding(.bottom, 8)
 
       HStack(spacing: 4) {
         ForEach(dummyTasks.indices, id: \.self) {
           index in
-            Rectangle().fill(Colors.turq.opacity(currIdx == index ? 0.8 : 0.1))
+          Rectangle().fill(Colors.turq.opacity(currIdx == index ? 0.8 : 0.1))
             .frame(width: currIdx == index ? 20 : 8, height: currIdx == index ? 5 : 4)
             .animation(.easeIn(duration: 0.2), value: currIdx == index)
             .cornerRadius(8)

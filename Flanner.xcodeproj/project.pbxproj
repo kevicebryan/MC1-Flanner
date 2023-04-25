@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D09EB8029F7F6FB0086922F /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09EB7F29F7F6FB0086922F /* HomeCardView.swift */; };
 		2D0D6FF329F1486F00E439DC /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D6FF229F1486F00E439DC /* SnapCarousel.swift */; };
 		2D21D2B029EFB584001B7416 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D21D2AF29EFB584001B7416 /* CoreDataManager.swift */; };
 		2D4014D829F049B600C3A656 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4014D729F049B600C3A656 /* DummyData.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D09EB7F29F7F6FB0086922F /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		2D0D6FF229F1486F00E439DC /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
 		2D21D2AF29EFB584001B7416 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2D4014D729F049B600C3A656 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D09EB7E29F7F6EE0086922F /* HomeCard */ = {
+			isa = PBXGroup;
+			children = (
+				2D09EB7F29F7F6FB0086922F /* HomeCardView.swift */,
+			);
+			path = HomeCard;
+			sourceTree = "<group>";
+		};
 		2D21D2AB29EFB3C6001B7416 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		2D56DA7329EE913F00002EE4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2D09EB7E29F7F6EE0086922F /* HomeCard */,
 				2DA9375929F0300A0057DD82 /* Carousel */,
 			);
 			path = Components;
@@ -281,6 +292,7 @@
 				2D4014DA29F05A9900C3A656 /* CarouselCard.swift in Sources */,
 				2DA9376129F0316E0057DD82 /* HomeView.swift in Sources */,
 				2DA9376729F033720057DD82 /* TaskListViewModel.swift in Sources */,
+				2D09EB8029F7F6FB0086922F /* HomeCardView.swift in Sources */,
 				2DA9376329F032CA0057DD82 /* DummyModel.swift in Sources */,
 				2D613FFE29ED7A4D0067B81E /* Prompts.swift in Sources */,
 				2D56DA7629EE91E000002EE4 /* FlannerModel.xcdatamodeld in Sources */,

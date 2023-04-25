@@ -18,8 +18,10 @@ struct DummyTask: Hashable, Identifiable {
 
 struct DummyTag: Hashable, Identifiable {
   let id = UUID()
-  var name: String = "Tag"
-  var color: String = "red"
+  var name: String = "👋 Tag"
+  var color: String = "00A4B4"
 }
 
 let dummyTasks = [DummyTask(), DummyTask(), DummyTask(), DummyTask(), DummyTask()]
+
+let dummyTags = [DummyTag(), DummyTag(), DummyTag()]

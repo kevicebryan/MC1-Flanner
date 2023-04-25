@@ -10,9 +10,14 @@ import SwiftUI
 struct HomeView: View {
   @State var currIdx: Int = 0
 
+  // total 7 recommendation --> 5 untuk carousel, 2 untuk card
+
   var body: some View {
     VStack {
-      HStack(spacing: 0) {}
+      HStack(spacing: 0) {
+        Text("Welcome John Wick! 👋").font(.title2).fontWeight(.bold)
+        Spacer()
+      }.padding(.horizontal)
 
       SnapCarousel(index: $currIdx, items: dummyTasks) {
         task in
@@ -20,7 +25,22 @@ struct HomeView: View {
           _ in
           CarouselCard(task: task)
         }
-      }.padding(.vertical, 40)
+      }.padding(.vertical).padding(.top, -8).padding(.leading, -8)
+
+      HStack {
+        Text("Recommended Activities For You 👇").multilineTextAlignment(.leading)
+          .fontWeight(.semibold)
+        Spacer()
+      }.padding(.horizontal)
+
+      ScrollView(showsIndicators: false) {
+        VStack(spacing: 22) {
+          HomeCardView()
+          HomeCardView()
+          HomeCardView()
+        }
+      }.frame(maxWidth: .infinity, maxHeight: 480)
+
     }.frame(maxHeight: .infinity, alignment: .top)
   }
 }
