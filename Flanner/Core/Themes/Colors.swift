@@ -8,11 +8,16 @@
 import Foundation
 import SwiftUI
 
-let cream = Color("#cream")
-let turq = Color("#turq")
-let lYellow = Color("#lightYellow")
-let dYellow = Color("#darkYellow")
+struct Colors {
+    static let cream = Color("#cream")
+    static let turq = Color("#turq")
+    static let lYellow = Color("#lightYellow")
+    static let dYellow = Color("#darkYellow")
+    static let lBlue = Color("#lightBlue")
 
-let white = Color.white
-let black = Color.black
+    static let white = Color.white
+    static let black = Color.black
+
+}
+
 
