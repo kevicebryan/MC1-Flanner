@@ -24,7 +24,8 @@ struct HomeCardView: View {
     HStack(spacing: 16) {
       // Image
       img.resizable().frame(width: 112, height: 112)
-        .cornerRadius(16).aspectRatio(contentMode: .fill).padding(.vertical, 8)
+        .cornerRadius(16).scaledToFill()
+        .padding(.vertical, 8)
         .padding(.leading, 20)
       // Info
       VStack(alignment: .leading) {
@@ -41,7 +42,7 @@ struct HomeCardView: View {
         }
       }.padding(.all, 8).padding(.leading, -16).frame(width: 200).padding(.trailing, 20)
     }.background(.white).cornerRadius(20).frame(width: 361, height: 132)
-      .shadow(color: Color.black.opacity(0.1), radius: 16, x: 2, y: 4)
+      .shadow(color: Color.black.opacity(0.1), radius: 4, x: 4, y: 6)
 //      .overlay {
 //        RoundedRectangle(cornerRadius: 8).stroke(Color.black).opacity(0.2)
 //      }
@@ -50,6 +51,6 @@ struct HomeCardView: View {
 
 struct HomeCardView_Previews: PreviewProvider {
   static var previews: some View {
-    HomeCardView()
+    HomeView()
   }
 }

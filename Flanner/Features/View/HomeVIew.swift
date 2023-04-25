@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
   @State var currIdx: Int = 0
 
-  // total 7 recommendation --> 5 untuk carousel, 2 untuk card
+  // total 6 recommendation --> 3 untuk carousel, 3 untuk card
 
   var body: some View {
     VStack {
@@ -25,7 +25,7 @@ struct HomeView: View {
           _ in
           CarouselCard(task: task)
         }
-      }.padding(.vertical).padding(.top, -8).padding(.leading, -8)
+      }.padding(.vertical).padding(.top, -8)
 
       HStack {
         Text("Recommended Activities For You 👇").multilineTextAlignment(.leading)
@@ -38,7 +38,7 @@ struct HomeView: View {
           HomeCardView()
           HomeCardView()
           HomeCardView()
-        }
+        }.padding(.horizontal)
       }.frame(maxWidth: .infinity, maxHeight: 480)
 
     }.frame(maxHeight: .infinity, alignment: .top)

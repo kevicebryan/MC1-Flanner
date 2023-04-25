@@ -22,6 +22,6 @@ struct DummyTag: Hashable, Identifiable {
   var color: String = "00A4B4"
 }
 
-let dummyTasks = [DummyTask(), DummyTask(), DummyTask(), DummyTask(), DummyTask()]
+let dummyTasks = [DummyTask(), DummyTask(), DummyTask()]
 
 let dummyTags = [DummyTag(), DummyTag(), DummyTag()]

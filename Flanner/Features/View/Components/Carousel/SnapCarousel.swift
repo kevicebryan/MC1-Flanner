@@ -68,7 +68,7 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
             x: CGFloat(
               CGFloat(currIdx) * -width)
               + offset
-              + (currIdx == 0 ? spacing * 3 : spacing * 2.5)
+              + (currIdx == 0 ? spacing * 3 : spacing * 3.5)
           )
           .gesture(
             DragGesture().updating($offset, body: {
