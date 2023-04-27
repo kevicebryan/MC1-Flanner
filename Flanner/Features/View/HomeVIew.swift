@@ -17,7 +17,7 @@ struct HomeView: View {
       HStack(spacing: 0) {
         Text("Welcome John Wick! 👋").font(.title2).fontWeight(.bold)
         Spacer()
-      }.padding(.horizontal)
+      }.padding(.horizontal, 32)
 
       SnapCarousel(index: $currIdx, items: dummyTasks) {
         task in
@@ -31,10 +31,10 @@ struct HomeView: View {
         Text("Recommended Activities For You 👇").multilineTextAlignment(.leading)
           .fontWeight(.semibold)
         Spacer()
-      }.padding(.horizontal)
+      }.padding(.horizontal, 32)
 
       ScrollView(showsIndicators: false) {
-        VStack(spacing: 22) {
+        VStack(spacing: 0) {
           HomeCardView()
           HomeCardView()
           HomeCardView()
