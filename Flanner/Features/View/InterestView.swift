@@ -39,6 +39,7 @@ struct InterestView: View {
           }
         }
       }.padding(.horizontal, 40)
+
     }.environmentObject(interestManager)
   }
 }
