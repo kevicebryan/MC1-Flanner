@@ -20,7 +20,7 @@ struct InterestView: View {
   var body: some View {
     VStack {
       VStack {
-        Text("Before we start").font(.title).fontWeight(.bold)
+        Text("Before we start 😁").font(.title).fontWeight(.bold)
         Text("Please choose your preferences that relate with you and your family.").font(.footnote).multilineTextAlignment(.center).foregroundColor(Colors.turq)
         HStack {
           Spacer()
