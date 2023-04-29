@@ -2,6 +2,6 @@
 
 #### Commit Messages tip:
 - add: (what you add)
-- update: (changes/updates)
+- fix/update: (changes/updates)
 - remove: (what you remove)
 
