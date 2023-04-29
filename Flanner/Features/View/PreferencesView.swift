@@ -24,8 +24,8 @@ struct PreferencesView: View {
                     .frame(alignment: .top)
                 Spacer()
                 Text("What's Your Family Preferences?")
-                    .font(.title)
-                    .bold()
+                    .font(.system(size: 24, weight: .bold))
+                    .frame(width: buttonWidth)
                     .multilineTextAlignment(.center)
                 
                 ZStack{
@@ -37,13 +37,13 @@ struct PreferencesView: View {
                         HStack{
                             Image(systemName: "figure.run")
                                 .resizable()
-                                .frame(width: 60, height: 100, alignment: .center)
+                                .frame(width: 70, height: 100, alignment: .center)
                                 .padding()
                                 .foregroundColor(Colors.turq)
                             Text("Sports-Oriented Activities")
                                 .foregroundColor(Colors.turq)
                                 .padding()
-                                .font(.system(size: 15))
+                                .font(.system(size: 16, weight: .bold))
                         }
                         
                     }
@@ -55,13 +55,13 @@ struct PreferencesView: View {
                         HStack{
                             Image(systemName: "figure.run")
                                 .resizable()
-                                .frame(width: 60, height: 100, alignment: .center)
+                                .frame(width: 70, height: 100, alignment: .center)
                                 .padding()
                                 .foregroundColor(Colors.cream)
                             Text("Sports-Oriented Activities")
                                 .foregroundColor(Colors.cream)
                                 .padding()
-                                .font(.system(size: 15))
+                                .font(.system(size: 16, weight: .bold))
                         }
                     }
                 }
@@ -87,12 +87,12 @@ struct PreferencesView: View {
                             Image(systemName: "figure.run")
                                 .resizable()
                                 .foregroundColor(Colors.turq)
-                                .frame(width: 60, height: 100, alignment: .center)
+                                .frame(width: 70, height: 100, alignment: .center)
                                 .padding()
                             Text("Sports-Oriented Activities")
                                 .foregroundColor(Colors.turq)
                                 .padding()
-                                .font(.system(size: 15))
+                                .font(.system(size: 16, weight: .bold))
                         }
                     }
                     else{
@@ -103,13 +103,13 @@ struct PreferencesView: View {
                         HStack{
                             Image(systemName: "figure.run")
                                 .resizable()
-                                .frame(width: 60, height: 100, alignment: .center)
+                                .frame(width: 70, height: 100, alignment: .center)
                                 .padding()
                                 .foregroundColor(Colors.cream)
                             Text("Sports-Oriented Activities")
                                 .foregroundColor(Colors.cream)
                                 .padding()
-                                .font(.system(size: 15))
+                                .font(.system(size: 16, weight: .bold))
                         }
                     }
                 }

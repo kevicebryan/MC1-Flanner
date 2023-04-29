@@ -13,13 +13,13 @@ struct ProgressBar: View {
         HStack {
             ForEach(0..<index){ i in
                 Rectangle()
-                    .frame(width: Size.screenWidth/11, height: 3)
+                    .frame(width: Size.screenWidth/10, height: 3)
                     .cornerRadius(20)
                     .foregroundColor(Colors.dYellow)
             }
             ForEach(0..<5-index){ i in
                 Rectangle()
-                    .frame(width: Size.screenWidth/11, height: 3)
+                    .frame(width: Size.screenWidth/10, height: 3)
                     .cornerRadius(20)
                     .foregroundColor(Color.gray)
             }
