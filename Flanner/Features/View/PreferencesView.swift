@@ -17,6 +17,9 @@ struct PreferencesView: View {
     var body: some View {
         NavigationView {
             VStack{
+                Text("GOAL & FOCUS 🎯")
+                    .foregroundColor(Colors.turq)
+                    .font(.system(size: 12, weight: .bold))
                 ProgressBar(index: $index)
                     .frame(alignment: .top)
                 Spacer()
@@ -128,6 +131,6 @@ struct PreferencesView: View {
 
 struct PreferencesView_Previews: PreviewProvider {
     static var previews: some View {
-        PreferencesView()
+        PreferencesView(index: 2)
     }
 }
