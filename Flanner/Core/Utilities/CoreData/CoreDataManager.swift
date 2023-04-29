@@ -25,7 +25,102 @@ class CoreDataManager {
     }
   }
 
-//  CRUD Task -- g kepake harusny...
+  // Users
+
+  func addUser(name: String) {
+    guard let userEntity = NSEntityDescription.entity(forEntityName: "User", in: viewContext)
+    else {
+      return
+    }
+    let user = User(entity: userEntity, insertInto: viewContext)
+
+    user.username = name
+    user.tags = NSSet(array: getAllTags())
+    save()
+  }
+
+  func getUser() -> User? {
+    let req: NSFetchRequest<User> = User.fetchRequest()
+    do {
+      return try viewContext.fetch(req).first ?? nil
+    } catch {
+      print("Error Fetching User")
+      return nil
+    }
+  }
+
+  func updateUserTag(tagName: String, like: Bool = false, dislike: Bool = false) {
+    let tag = getTagByName(name: tagName)
+    if like {
+      tag?.weight = 3
+    }
+    if dislike {
+      tag?.weight = 1
+    }
+    if !like, !dislike {
+      tag?.weight = 2
+    }
+  }
+
+  // Tags --> note: Like= 3, B-Aja=2, Dislike=1
+  func getAllTags() -> [Tag] {
+    let req: NSFetchRequest<Tag> = Tag.fetchRequest()
+    do {
+      return try viewContext.fetch(req)
+    } catch {
+      print("Error Fetching Tags")
+      return []
+    }
+  }
+
+  func seedAllTags() {
+    let tags = getAllTags()
+    if tags.isEmpty {
+      for tagSeed in tagSeeds {
+        addTag(name: tagSeed.name, color: tagSeed.color)
+      }
+      print("SEEDED All Tags")
+    } else {
+      print("Your tags have been seeded before: \(tags.count) existing tags")
+    }
+  }
+
+  func addTag(name: String, color: String, weight: Int = 2) {
+    guard let tagEntity = NSEntityDescription.entity(forEntityName: "Tag", in: viewContext)
+    else {
+      return
+    }
+    let newTag = Tag(entity: tagEntity, insertInto: viewContext)
+    newTag.name = name
+    newTag.color = color
+    newTag.weight = Int32(weight)
+    save()
+    print("Added new tag: \(name)")
+  }
+
+  func getTagByName(name: String) -> Tag? {
+    let req: NSFetchRequest<Tag>
+    req = Tag.fetchRequest()
+    req.predicate = NSPredicate(
+      format: "name LIKE ", "\(name)"
+    )
+    do {
+      return try viewContext.fetch(req).first
+    } catch {
+      print("Error Fetching Tag: \(name)")
+      return nil
+    }
+  }
+
+  // Tasks
+  func seedAllTasks() {
+    let tasks = getAllTasks()
+    if tasks.isEmpty {
+    } else {
+      print("Your tasks have been seeded before: \(tasks.count) existing tasks")
+    }
+  }
+
   func getTaskById(id: NSManagedObjectID) -> Task? {
     do {
       return try viewContext.existingObject(with: id) as? Task
@@ -34,7 +129,7 @@ class CoreDataManager {
     }
   }
 
-  func getAllTask() -> [Task] {
+  func getAllTasks() -> [Task] {
     let req: NSFetchRequest<Task> = Task.fetchRequest()
     do {
       return try viewContext.fetch(req)
@@ -44,9 +139,26 @@ class CoreDataManager {
     }
   }
 
-  func addTask(text: String) {
-    let newActivity = Task(context: viewContext)
-    newActivity.name = text
+  func addTask(name: String, loc: String = "Jakarta", tagNames: [String], detail: String, img: String)
+  {
+    guard let taskEntity = NSEntityDescription.entity(forEntityName: "Task", in: viewContext)
+    else {
+      return
+    }
+    let task = Task(entity: taskEntity, insertInto: viewContext)
+    task.name = name
+    task.location = loc
+    task.detail = detail
+    task.image = img
+
+    var tags: [Tag] = []
+    for tagName in tagNames {
+      if let currTag = getTagByName(name: tagName) {
+        tags.append(currTag)
+      }
+    }
+    task.tags = NSSet(array: tags)
+    save()
   }
 
   func deleteTask(task: Task) {
