@@ -39,9 +39,9 @@ struct PreferencesView: View {
                                 .resizable()
                                 .frame(width: 60, height: 100, alignment: .center)
                                 .padding()
-                                .foregroundColor(Color("#turq"))
+                                .foregroundColor(Colors.turq)
                             Text("Sports-Oriented Activities")
-                                .foregroundColor(Color("#turq"))
+                                .foregroundColor(Colors.turq)
                                 .padding()
                                 .font(.system(size: 15))
                         }
@@ -49,7 +49,7 @@ struct PreferencesView: View {
                     }
                     else{
                         Rectangle()
-                            .foregroundColor(Color("#turq"))
+                            .foregroundColor(Colors.turq)
                             .cornerRadius(20, antialiased: true)
                         
                         HStack{
@@ -57,9 +57,9 @@ struct PreferencesView: View {
                                 .resizable()
                                 .frame(width: 60, height: 100, alignment: .center)
                                 .padding()
-                                .foregroundColor(Color("#cream"))
+                                .foregroundColor(Colors.cream)
                             Text("Sports-Oriented Activities")
-                                .foregroundColor(Color("#cream"))
+                                .foregroundColor(Colors.cream)
                                 .padding()
                                 .font(.system(size: 15))
                         }
@@ -80,24 +80,24 @@ struct PreferencesView: View {
                 ZStack{
                     if !isSelected2{
                         Rectangle()
-                            .foregroundColor(Color("#lightBlue"))
+                            .foregroundColor(Colors.lBlue)
                             .cornerRadius(20, antialiased: true)
                         
                         HStack{
                             Image(systemName: "figure.run")
                                 .resizable()
-                                .foregroundColor(Color("#turq"))
+                                .foregroundColor(Colors.turq)
                                 .frame(width: 60, height: 100, alignment: .center)
                                 .padding()
                             Text("Sports-Oriented Activities")
-                                .foregroundColor(Color("#turq"))
+                                .foregroundColor(Colors.turq)
                                 .padding()
                                 .font(.system(size: 15))
                         }
                     }
                     else{
                         Rectangle()
-                            .foregroundColor(Color("#turq"))
+                            .foregroundColor(Colors.turq)
                             .cornerRadius(20, antialiased: true)
                         
                         HStack{
@@ -105,9 +105,9 @@ struct PreferencesView: View {
                                 .resizable()
                                 .frame(width: 60, height: 100, alignment: .center)
                                 .padding()
-                                .foregroundColor(Color("#cream"))
+                                .foregroundColor(Colors.cream)
                             Text("Sports-Oriented Activities")
-                                .foregroundColor(Color("#cream"))
+                                .foregroundColor(Colors.cream)
                                 .padding()
                                 .font(.system(size: 15))
                         }
