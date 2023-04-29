@@ -28,7 +28,7 @@ struct ContentView: View {
           Text("Plan")
         }
       }.sheet(isPresented: $isShown, content: {
-        InterestView(interestManager: InterestManager())
+        PreferencesView(categoryManager: CategoryManager())
       })
       Spacer()
       VStack{

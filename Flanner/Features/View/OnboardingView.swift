@@ -50,7 +50,7 @@ struct OnboardingView: View {
                     
                     
                     
-                    NavigationLink(destination: PreferencesView()){
+                    NavigationLink(destination: PreferencesView(categoryManager: CategoryManager())){
                         Text("Continue")
                             .foregroundColor(.white)
                     }

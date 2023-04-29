@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Interest {
+struct Category {
   var name: String
   var symbol: String
   var selected: Bool
