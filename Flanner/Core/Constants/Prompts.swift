@@ -9,7 +9,7 @@ import Foundation
 
 
 let homeTitle = "Welcome User"
-let apa = "apa123sda"
+let apa = "apa123sdakndaksdn"
 
 // check if user is logged in, if not go to onboarding, if yes go to home
 // bisa store color di dtabase/ ganti dri string ke Color --> store as HEX
