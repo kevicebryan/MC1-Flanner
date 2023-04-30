@@ -7,23 +7,21 @@
 
 import SwiftUI
 
-
-
 struct ContentView: View {
   @State var isShown = false
   var body: some View {
     HStack {
       Spacer()
-      VStack{
+      VStack {
         Image(systemName: "house")
         Text("Home")
       }
       Spacer()
-      
-      Button{
+
+      Button {
         isShown.toggle()
       } label: {
-        VStack{
+        VStack {
           Image(systemName: "list.clipboard.fill")
           Text("Plan")
         }
@@ -31,7 +29,7 @@ struct ContentView: View {
         PreferencesView(categoryManager: CategoryManager())
       })
       Spacer()
-      VStack{
+      VStack {
         Image(systemName: "person.crop.circle.fill")
         Text("Activity")
       }

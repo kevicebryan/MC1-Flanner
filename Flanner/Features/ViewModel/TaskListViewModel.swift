@@ -9,6 +9,7 @@ import CoreData
 import Foundation
 
 class TaskListViewModel: ObservableObject {
+  let taskModel = TaskModel()
   @Published var tasks: [TaskViewModel] = []
   @Published var recommendations: [TaskViewModel] = []
 
@@ -17,7 +18,7 @@ class TaskListViewModel: ObservableObject {
   }
 
   func getAllTask() {
-    tasks = CoreDataManager.shared.getAllTasks().map(TaskViewModel.init)
+    tasks = taskModel.getAllTasks().map(TaskViewModel.init)
   }
 
   func getRecommendations() {
@@ -25,16 +26,11 @@ class TaskListViewModel: ObservableObject {
   }
 
   func delete(_ task: TaskViewModel) {
-    let currTask = CoreDataManager.shared.getTaskById(id: task.id)
+    let currTask = taskModel.getTaskById(id: task.id)
 
     if let currTask = currTask {
-      CoreDataManager.shared.deleteTask(task: currTask)
+      taskModel.deleteTask(task: currTask)
     }
-  }
-
-  func save() {
-    let task = Task(context: CoreDataManager.shared.viewContext)
-    CoreDataManager.shared.save()
   }
 }
 

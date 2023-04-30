@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryBoxView: View {
   @EnvironmentObject var categoryManager: CategoryManager
-    @Binding var category: Category
+  @Binding var category: Category
 
   var body: some View {
     if categoryManager.selectedCategory < 5 || category.selected {
@@ -39,16 +39,6 @@ struct CategoryBoxView: View {
         .foregroundColor(Colors.turq)
         .shadow(color: Color.black.opacity(!category.selected ? 0 : 0.2), radius: 4, x: 4, y: 6)
         .opacity(0.7)
-      //        .onTapGesture {
-      //          category.toggleSelected()
-      //          if category.selected {
-      //            categoryManager.selectedCategory += 1
-      //          } else {
-      //            categoryManager.selectedCategory -= 1
-      //          }
-      //          print("Selected Interst:")
-      //          print(categoryManager.self.selectedCategory)
-      //        }.animation(.easeIn(duration: 0.2), value: category.selected)
     }
   }
 }

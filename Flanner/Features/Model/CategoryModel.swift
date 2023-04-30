@@ -12,17 +12,20 @@ struct Category {
   var name: String
   var symbol: String
   var selected: Bool
+  var tagName: String
 
-  init(name: String, symbol: String) {
+  init(name: String, symbol: String, tagName: String) {
     self.name = name
     self.symbol = symbol
     self.selected = false
+    self.tagName = tagName
   }
 
   mutating func toggleSelected() {
     self.selected = !self.selected
   }
-//  var tag
+
+  func updateUserTag() {
+    UserModel().updateUserTag(tagName: self.tagName, like: true)
+  }
 }
-
-

@@ -9,6 +9,8 @@ import CoreData
 import Foundation
 
 struct TagViewModel {
+  let tagModel = TagModel()
+
   let tag: Tag
 
   var id: NSManagedObjectID {

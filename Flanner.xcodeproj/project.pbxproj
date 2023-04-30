@@ -32,6 +32,11 @@
 		2D90E85C29FE5D55002868B1 /* AdminTaskCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */; };
 		2D90E85E29FE60AB002868B1 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85D29FE60AB002868B1 /* TagViewModel.swift */; };
 		2D90E86229FEA773002868B1 /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E86129FEA773002868B1 /* CarouselCard.swift */; };
+		2D90E86629FEA966002868B1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E86529FEA966002868B1 /* MainView.swift */; };
+		2D90E86C29FEAB81002868B1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E86B29FEAB81002868B1 /* CustomButton.swift */; };
+		2D90E87729FEB504002868B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E87629FEB504002868B1 /* User.swift */; };
+		2D90E87929FEB510002868B1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E87829FEB510002868B1 /* Task.swift */; };
+		2D90E87B29FEB51A002868B1 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E87A29FEB51A002868B1 /* Tag.swift */; };
 		2DA9375829F02FD10057DD82 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9375729F02FD10057DD82 /* HelperFunctions.swift */; };
 		2DA9376129F0316E0057DD82 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9376029F0316E0057DD82 /* HomeView.swift */; };
 		2DA9376729F033720057DD82 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9376629F033720057DD82 /* TaskListViewModel.swift */; };
@@ -66,6 +71,11 @@
 		2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTaskCard.swift; sourceTree = "<group>"; };
 		2D90E85D29FE60AB002868B1 /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
 		2D90E86129FEA773002868B1 /* CarouselCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
+		2D90E86529FEA966002868B1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2D90E86B29FEAB81002868B1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		2D90E87629FEB504002868B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2D90E87829FEB510002868B1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		2D90E87A29FEB51A002868B1 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		2DA9375729F02FD10057DD82 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		2DA9376029F0316E0057DD82 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2DA9376629F033720057DD82 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
@@ -97,12 +107,12 @@
 		2D21D2AB29EFB3C6001B7416 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2DA9376029F0316E0057DD82 /* HomeView.swift */,
-				1B8705C229FD3EF0001CD1E2 /* OnboardingView.swift */,
-				1B8705C329FD3EF0001CD1E2 /* ThisOrThatView.swift */,
-				2D750C2829FA58EC004C2389 /* PreferencesView.swift */,
-				2D56DA7329EE913F00002EE4 /* Components */,
+				2D90E86529FEA966002868B1 /* MainView.swift */,
 				2D90D31A29FBCFD000108975 /* ContentView.swift */,
+				2DA9376029F0316E0057DD82 /* HomeView.swift */,
+				2D90E86D29FEACD5002868B1 /* Onboarding */,
+				1B8705C329FD3EF0001CD1E2 /* ThisOrThatView.swift */,
+				2D56DA7329EE913F00002EE4 /* Components */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,10 +120,10 @@
 		2D21D2AC29EFB3D0001B7416 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2DA9376629F033720057DD82 /* TaskListViewModel.swift */,
-				2D750C2E29FA873F004C2389 /* CategoryViewModel.swift */,
-				2D90D31829FBCDCC00108975 /* UserViewModel.swift */,
 				2D90E85D29FE60AB002868B1 /* TagViewModel.swift */,
+				2DA9376629F033720057DD82 /* TaskListViewModel.swift */,
+				2D90D31829FBCDCC00108975 /* UserViewModel.swift */,
+				2D750C2E29FA873F004C2389 /* CategoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -121,6 +131,7 @@
 		2D21D2AD29EFB3D9001B7416 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2D90E87529FEB4F4002868B1 /* Entities */,
 				2D4014D729F049B600C3A656 /* DummyData.swift */,
 				2D27CFC429FCD0EA00B1EE67 /* SeederData.swift */,
 				2D750C2A29FA5907004C2389 /* CategoryModel.swift */,
@@ -135,6 +146,7 @@
 				2DA9375929F0300A0057DD82 /* Carousel */,
 				2D750C2C29FA5B44004C2389 /* InterestBoxView.swift */,
 				1B8705C829FD3FD2001CD1E2 /* ProgressBar.swift */,
+				2D90E86B29FEAB81002868B1 /* CustomButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -213,6 +225,25 @@
 				2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */,
 			);
 			path = Admin;
+			sourceTree = "<group>";
+		};
+		2D90E86D29FEACD5002868B1 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1B8705C229FD3EF0001CD1E2 /* OnboardingView.swift */,
+				2D750C2829FA58EC004C2389 /* PreferencesView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2D90E87529FEB4F4002868B1 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2D90E87629FEB504002868B1 /* User.swift */,
+				2D90E87A29FEB51A002868B1 /* Tag.swift */,
+				2D90E87829FEB510002868B1 /* Task.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		2DA9375629F02FC50057DD82 /* HelperFunctions */ = {
@@ -342,6 +373,7 @@
 				2D90E86229FEA773002868B1 /* CarouselCard.swift in Sources */,
 				2D0D6FF329F1486F00E439DC /* SnapCarousel.swift in Sources */,
 				2D750C2D29FA5B44004C2389 /* InterestBoxView.swift in Sources */,
+				2D90E86C29FEAB81002868B1 /* CustomButton.swift in Sources */,
 				2D750C2F29FA873F004C2389 /* CategoryViewModel.swift in Sources */,
 				2D750C2F29FA873F004C2389 /* CategoryViewModel.swift in Sources */,
 				2D90E85C29FE5D55002868B1 /* AdminTaskCard.swift in Sources */,
@@ -354,6 +386,7 @@
 				2D90E85429FE41DF002868B1 /* AdminView.swift in Sources */,
 				1B8705C929FD3FD2001CD1E2 /* ProgressBar.swift in Sources */,
 				2D90D31929FBCDCC00108975 /* UserViewModel.swift in Sources */,
+				2D90E87B29FEB51A002868B1 /* Tag.swift in Sources */,
 				2D90D31B29FBCFD000108975 /* ContentView.swift in Sources */,
 				2D90E85A29FE49A0002868B1 /* AdminViewModel.swift in Sources */,
 				2DA9376129F0316E0057DD82 /* HomeView.swift in Sources */,
@@ -366,8 +399,11 @@
 				1B8705C129FD3EE3001CD1E2 /* Size.swift in Sources */,
 				2D750C2B29FA5907004C2389 /* CategoryModel.swift in Sources */,
 				2DBB102629ED155C004018ED /* FlannerApp.swift in Sources */,
+				2D90E86629FEA966002868B1 /* MainView.swift in Sources */,
 				2D750C2929FA58EC004C2389 /* PreferencesView.swift in Sources */,
 				1B8705C529FD3EF0001CD1E2 /* ThisOrThatView.swift in Sources */,
+				2D90E87929FEB510002868B1 /* Task.swift in Sources */,
+				2D90E87729FEB504002868B1 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

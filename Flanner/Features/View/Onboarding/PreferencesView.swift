@@ -40,6 +40,10 @@ struct PreferencesView: View {
         }
       }.padding(.horizontal, 40)
 
+      NavigationLink(destination: ThisOrThatView()) {
+        CustomButton(label: "Next", width: 300)
+      }
+
     }.environmentObject(categoryManager)
   }
 }

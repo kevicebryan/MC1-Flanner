@@ -8,28 +8,31 @@
 import Foundation
 
 class AdminManager: ObservableObject {
-  let cm: CoreDataManager
+  let cdm: CoreDataManager
+  let tagM = TagModel()
+  let taskM = TaskModel()
+
   var tags: [Tag]
   var tasks: [TaskViewModel]
 
   init() {
-    cm = CoreDataManager.shared
-    tags = cm.getAllTags()
-    tasks = cm.getAllTasks().map(TaskViewModel.init)
+    cdm = CoreDataManager.shared
+    tags = tagM.getAllTags()
+    tasks = taskM.getAllTasks().map(TaskViewModel.init)
   }
 
   func refreshData() {
-    tags = cm.getAllTags()
-    tasks = cm.getAllTasks().map(TaskViewModel.init)
+    tags = tagM.getAllTags()
+    tasks = taskM.getAllTasks().map(TaskViewModel.init)
   }
 
   func seedInitialData() {
-    cm.seedAllData()
+    cdm.seedAllData()
     refreshData()
   }
 
   func deleteAll() {
-    cm.deleteAllData()
+    cdm.deleteAllData()
     refreshData()
   }
 }

@@ -12,17 +12,17 @@ class CategoryManager: ObservableObject {
   var selectedCategory: Int = 0
 
   init() {
-      self.categories = [
-      Category(name: "Sport", symbol: "figure.run"),
-      Category(name: "Music", symbol: "music.quarternote.3"),
-      Category(name: "Food", symbol: "fork.knife"),
-      Category(name: "Travel", symbol: "airplane"),
-      Category(name: "Movie", symbol: "popcorn"),
-      Category(name: "Art", symbol: "paintpalette"),
-      Category(name: "Gaming", symbol: "gamecontroller"),
-      Category(name: "Nature", symbol: "leaf"),
+    self.categories = [
+      Category(name: "Sport", symbol: "figure.run", tagName: "Sport"),
+      Category(name: "Music", symbol: "music.quarternote.3", tagName: "Music"),
+      Category(name: "Food", symbol: "fork.knife", tagName: "Food"),
+      Category(name: "Travel", symbol: "airplane", tagName: "Travel"),
+      Category(name: "Movie", symbol: "popcorn", tagName: "Movie"),
+      Category(name: "Art", symbol: "paintpalette", tagName: "Art"),
+      Category(name: "Gaming", symbol: "gamecontroller", tagName: "Gaming"),
+      Category(name: "Nature", symbol: "leaf", tagName: "Nature"),
     ]
   }
 }
 
-var dummyCategory = Category(name: "Sport", symbol: "figure.run")
+var dummyCategory = Category(name: "Sport", symbol: "figure.run", tagName: "Sport")
