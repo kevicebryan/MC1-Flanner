@@ -10,6 +10,7 @@
 		2D09EB8029F7F6FB0086922F /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09EB7F29F7F6FB0086922F /* HomeCardView.swift */; };
 		2D0D6FF329F1486F00E439DC /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D6FF229F1486F00E439DC /* SnapCarousel.swift */; };
 		2D21D2B029EFB584001B7416 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D21D2AF29EFB584001B7416 /* CoreDataManager.swift */; };
+		2D27CFC529FCD0EA00B1EE67 /* SeederData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27CFC429FCD0EA00B1EE67 /* SeederData.swift */; };
 		2D4014D829F049B600C3A656 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4014D729F049B600C3A656 /* DummyData.swift */; };
 		2D4014DA29F05A9900C3A656 /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4014D929F05A9900C3A656 /* CarouselCard.swift */; };
 		2D56DA7629EE91E000002EE4 /* FlannerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D56DA7429EE91E000002EE4 /* FlannerModel.xcdatamodeld */; };
@@ -21,6 +22,12 @@
 		2D750C2F29FA873F004C2389 /* InterestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D750C2E29FA873F004C2389 /* InterestViewModel.swift */; };
 		2D90D31929FBCDCC00108975 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90D31829FBCDCC00108975 /* UserViewModel.swift */; };
 		2D90D31B29FBCFD000108975 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90D31A29FBCFD000108975 /* ContentView.swift */; };
+		2D90E85429FE41DF002868B1 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85329FE41DF002868B1 /* AdminView.swift */; };
+		2D90E85629FE451A002868B1 /* AllTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85529FE451A002868B1 /* AllTagsView.swift */; };
+		2D90E85829FE4535002868B1 /* AllTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85729FE4535002868B1 /* AllTaskView.swift */; };
+		2D90E85A29FE49A0002868B1 /* AdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85929FE49A0002868B1 /* AdminViewModel.swift */; };
+		2D90E85C29FE5D55002868B1 /* AdminTaskCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */; };
+		2D90E85E29FE60AB002868B1 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85D29FE60AB002868B1 /* TagViewModel.swift */; };
 		2DA9375829F02FD10057DD82 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9375729F02FD10057DD82 /* HelperFunctions.swift */; };
 		2DA9375B29F030260057DD82 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9375A29F030260057DD82 /* Carousel.swift */; };
 		2DA9376129F0316E0057DD82 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9376029F0316E0057DD82 /* HomeView.swift */; };
@@ -34,6 +41,7 @@
 		2D09EB7F29F7F6FB0086922F /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		2D0D6FF229F1486F00E439DC /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
 		2D21D2AF29EFB584001B7416 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		2D27CFC429FCD0EA00B1EE67 /* SeederData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeederData.swift; sourceTree = "<group>"; };
 		2D4014D729F049B600C3A656 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		2D4014D929F05A9900C3A656 /* CarouselCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
 		2D56DA7529EE91E000002EE4 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -45,6 +53,12 @@
 		2D750C2E29FA873F004C2389 /* InterestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewModel.swift; sourceTree = "<group>"; };
 		2D90D31829FBCDCC00108975 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		2D90D31A29FBCFD000108975 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2D90E85329FE41DF002868B1 /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
+		2D90E85529FE451A002868B1 /* AllTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTagsView.swift; sourceTree = "<group>"; };
+		2D90E85729FE4535002868B1 /* AllTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTaskView.swift; sourceTree = "<group>"; };
+		2D90E85929FE49A0002868B1 /* AdminViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewModel.swift; sourceTree = "<group>"; };
+		2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTaskCard.swift; sourceTree = "<group>"; };
+		2D90E85D29FE60AB002868B1 /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
 		2DA9375729F02FD10057DD82 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		2DA9375A29F030260057DD82 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		2DA9376029F0316E0057DD82 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -91,6 +105,7 @@
 				2DA9376629F033720057DD82 /* TaskListViewModel.swift */,
 				2D750C2E29FA873F004C2389 /* InterestViewModel.swift */,
 				2D90D31829FBCDCC00108975 /* UserViewModel.swift */,
+				2D90E85D29FE60AB002868B1 /* TagViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -100,6 +115,7 @@
 			children = (
 				2D4014D729F049B600C3A656 /* DummyData.swift */,
 				2D750C2A29FA5907004C2389 /* InterestModel.swift */,
+				2D27CFC429FCD0EA00B1EE67 /* SeederData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,11 +185,24 @@
 		2D61400129ED7D320067B81E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				2D90E85229FE41D2002868B1 /* Admin */,
 				2D21D2AD29EFB3D9001B7416 /* Model */,
 				2D21D2AC29EFB3D0001B7416 /* ViewModel */,
 				2D21D2AB29EFB3C6001B7416 /* View */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		2D90E85229FE41D2002868B1 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				2D90E85929FE49A0002868B1 /* AdminViewModel.swift */,
+				2D90E85329FE41DF002868B1 /* AdminView.swift */,
+				2D90E85529FE451A002868B1 /* AllTagsView.swift */,
+				2D90E85729FE4535002868B1 /* AllTaskView.swift */,
+				2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */,
+			);
+			path = Admin;
 			sourceTree = "<group>";
 		};
 		2DA9375629F02FC50057DD82 /* HelperFunctions */ = {
@@ -304,17 +333,24 @@
 				2D0D6FF329F1486F00E439DC /* SnapCarousel.swift in Sources */,
 				2D750C2D29FA5B44004C2389 /* InterestBoxView.swift in Sources */,
 				2D750C2F29FA873F004C2389 /* InterestViewModel.swift in Sources */,
+				2D90E85C29FE5D55002868B1 /* AdminTaskCard.swift in Sources */,
+				2D90E85829FE4535002868B1 /* AllTaskView.swift in Sources */,
 				2D21D2B029EFB584001B7416 /* CoreDataManager.swift in Sources */,
+				2D27CFC529FCD0EA00B1EE67 /* SeederData.swift in Sources */,
 				2DA9375829F02FD10057DD82 /* HelperFunctions.swift in Sources */,
+				2D90E85E29FE60AB002868B1 /* TagViewModel.swift in Sources */,
 				2D4014DA29F05A9900C3A656 /* CarouselCard.swift in Sources */,
+				2D90E85429FE41DF002868B1 /* AdminView.swift in Sources */,
 				2D90D31929FBCDCC00108975 /* UserViewModel.swift in Sources */,
 				2D90D31B29FBCFD000108975 /* ContentView.swift in Sources */,
+				2D90E85A29FE49A0002868B1 /* AdminViewModel.swift in Sources */,
 				2DA9376129F0316E0057DD82 /* HomeView.swift in Sources */,
 				2DA9376729F033720057DD82 /* TaskListViewModel.swift in Sources */,
 				2D09EB8029F7F6FB0086922F /* HomeCardView.swift in Sources */,
 				2D613FFE29ED7A4D0067B81E /* Prompts.swift in Sources */,
 				2D56DA7629EE91E000002EE4 /* FlannerModel.xcdatamodeld in Sources */,
 				2DA9375B29F030260057DD82 /* Carousel.swift in Sources */,
+				2D90E85629FE451A002868B1 /* AllTagsView.swift in Sources */,
 				2D613FFC29ED79B30067B81E /* Colors.swift in Sources */,
 				2D750C2B29FA5907004C2389 /* InterestModel.swift in Sources */,
 				2DBB102629ED155C004018ED /* FlannerApp.swift in Sources */,
