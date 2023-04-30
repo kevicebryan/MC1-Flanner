@@ -24,6 +24,10 @@ class UserModel: ObservableObject {
     print("ADDED NEW USER")
   }
 
+  func saveUser(user: User) {
+    cdm.save()
+  }
+
   func getAllUsers() -> [User] {
     let req: NSFetchRequest<User> = User.fetchRequest()
     do {

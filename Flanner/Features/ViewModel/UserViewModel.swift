@@ -37,7 +37,6 @@ class UserManager: ObservableObject {
     cdm.seedAllData()
     userModel.addUser(name: username)
     print("new user successfully added: \(username)")
-    getUserData()
   }
 }
 

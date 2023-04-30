@@ -12,7 +12,7 @@ struct FlannerApp: App {
   var body: some Scene {
     WindowGroup {
       MainView()
-      AdminView(am: AdminManager())
+//      AdminView(am: AdminManager())
     }
   }
 }
