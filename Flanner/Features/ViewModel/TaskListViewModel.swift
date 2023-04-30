@@ -13,7 +13,7 @@ class TaskListViewModel: ObservableObject {
   @Published var activites: [TaskViewModel] = []
 
   func getAllTask() {
-    activites = CoreDataManager.shared.getAllTask().map(TaskViewModel.init)
+    activites = CoreDataManager.shared.getAllTasks().map(TaskViewModel.init)
   }
 
   func delete(_ task: TaskViewModel) {

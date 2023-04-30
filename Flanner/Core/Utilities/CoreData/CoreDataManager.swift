@@ -26,7 +26,6 @@ class CoreDataManager {
   }
 
   // Users
-
   func addUser(name: String) {
     guard let userEntity = NSEntityDescription.entity(forEntityName: "User", in: viewContext)
     else {
@@ -90,7 +89,8 @@ class CoreDataManager {
     else {
       return
     }
-    let newTag = Tag(entity: tagEntity, insertInto: viewContext)
+//    let tagObj = NSManagedObject(entity: tagEntity, insertInto: viewContext)
+    var newTag = Tag(entity: tagEntity, insertInto: viewContext)
     newTag.name = name
     newTag.color = color
     newTag.weight = Int32(weight)
@@ -102,7 +102,7 @@ class CoreDataManager {
     let req: NSFetchRequest<Tag>
     req = Tag.fetchRequest()
     req.predicate = NSPredicate(
-      format: "name LIKE ", "\(name)"
+      format: "name LIKE %@", name
     )
     do {
       return try viewContext.fetch(req).first
@@ -116,6 +116,9 @@ class CoreDataManager {
   func seedAllTasks() {
     let tasks = getAllTasks()
     if tasks.isEmpty {
+      for taskSeed in taskSeeds {
+        addTask(name: taskSeed.name, tagNames: taskSeed.tagNames, detail: taskSeed.detail, img: taskSeed.img)
+      }
     } else {
       print("Your tasks have been seeded before: \(tasks.count) existing tasks")
     }
@@ -166,7 +169,36 @@ class CoreDataManager {
     save()
   }
 
-//  Util save function:
+  func deleteAllEntity(entityName: String) {
+    let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
+    let deleteReq = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+    do {
+      try viewContext.execute(deleteReq)
+    } catch let error as NSError {
+      print(error)
+    }
+  }
+
+  // Admin Functions
+  func seedAllData() {
+    print("preparing seeding Tags")
+    seedAllTags()
+    print("preparig seeding Tasks")
+    seedAllTasks()
+  }
+
+  func deleteAllData() {
+    print("attempting to delete all User")
+    deleteAllEntity(entityName: "User")
+    print("attempting to delete all Task")
+    deleteAllEntity(entityName: "Task")
+    print("attempting to delete all Tags")
+    deleteAllEntity(entityName: "Tag")
+    save()
+  }
+
+  //  Util save function:
   func save() {
     do {
       try viewContext.save()
