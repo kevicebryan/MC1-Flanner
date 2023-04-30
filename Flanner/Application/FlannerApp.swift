@@ -11,7 +11,9 @@ import SwiftUI
 struct FlannerApp: App {
   var body: some Scene {
     WindowGroup {
-        PreferencesView(categoryManager: CategoryManager())
+//      PreferencesView(categoryManager: CategoryManager())
+
+      AdminView(am: AdminManager())
     }
   }
 }
