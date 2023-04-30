@@ -14,8 +14,7 @@ struct AllTaskView: View {
     VStack {
       Text("All Tasks").font(.title)
       ForEach(am.tasks, id: \.self.id) { task in
-        VStack { Text(task.name ?? "---")
-        }
+        AdminTaskCard(task: task)
       }
     }
   }

@@ -10,17 +10,17 @@ import Foundation
 class AdminManager: ObservableObject {
   let cm: CoreDataManager
   var tags: [Tag]
-  var tasks: [Task]
+  var tasks: [TaskViewModel]
 
   init() {
     cm = CoreDataManager.shared
     tags = cm.getAllTags()
-    tasks = cm.getAllTasks()
+    tasks = cm.getAllTasks().map(TaskViewModel.init)
   }
 
   func refreshData() {
     tags = cm.getAllTags()
-    tasks = cm.getAllTasks()
+    tasks = cm.getAllTasks().map(TaskViewModel.init)
   }
 
   func seedInitialData() {

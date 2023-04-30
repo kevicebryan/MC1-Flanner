@@ -11,13 +11,15 @@ struct AllTagsView: View {
   @ObservedObject var am: AdminManager
 
   var body: some View {
-    VStack {
-      Text("All Tags").font(.title)
+    VStack(alignment: .leading) {
+      Text("All Tags").font(.title).fontWeight(.heavy)
       ForEach(am.tags, id: \.self.id) { tag in
-        VStack {
+        HStack {
           Text(tag.name ?? "---")
-        }
+          Text("\(tag.weight)").font(.caption2)
+        }.foregroundColor(Color(hex: tag.color ?? "d9d9d9")).padding(.all, 2)
       }
+      Spacer()
     }
   }
 }

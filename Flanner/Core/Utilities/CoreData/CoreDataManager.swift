@@ -85,15 +85,11 @@ class CoreDataManager {
   }
 
   func addTag(name: String, color: String, weight: Int = 2) {
-    guard let tagEntity = NSEntityDescription.entity(forEntityName: "Tag", in: viewContext)
-    else {
-      return
-    }
-//    let tagObj = NSManagedObject(entity: tagEntity, insertInto: viewContext)
-    var newTag = Tag(entity: tagEntity, insertInto: viewContext)
-    newTag.name = name
-    newTag.color = color
-    newTag.weight = Int32(weight)
+    let tagEntry = NSEntityDescription.insertNewObject(forEntityName: "Tag", into: viewContext)
+    tagEntry.setValue(UUID(), forKey: "id")
+    tagEntry.setValue(Int32(2), forKey: "weight")
+    tagEntry.setValue(name, forKey: "name")
+    tagEntry.setValue(color, forKey: "color")
     save()
     print("Added new tag: \(name)")
   }
@@ -142,6 +138,14 @@ class CoreDataManager {
     }
   }
 
+  func getTaskTag(task: Task) {
+    let tags: [Tag]
+
+//    for tag in task.tags {
+//      tags.append()
+//    }
+  }
+
   func addTask(name: String, loc: String = "Jakarta", tagNames: [String], detail: String, img: String)
   {
     guard let taskEntity = NSEntityDescription.entity(forEntityName: "Task", in: viewContext)
@@ -149,6 +153,7 @@ class CoreDataManager {
       return
     }
     let task = Task(entity: taskEntity, insertInto: viewContext)
+    task.id = UUID()
     task.name = name
     task.location = loc
     task.detail = detail

@@ -9,11 +9,19 @@ import CoreData
 import Foundation
 
 class TaskListViewModel: ObservableObject {
-  var name: String = ""
-  @Published var activites: [TaskViewModel] = []
+  @Published var tasks: [TaskViewModel] = []
+  @Published var recommendations: [TaskViewModel] = []
+
+  init() {
+    getAllTask()
+  }
 
   func getAllTask() {
-    activites = CoreDataManager.shared.getAllTasks().map(TaskViewModel.init)
+    tasks = CoreDataManager.shared.getAllTasks().map(TaskViewModel.init)
+  }
+
+  func getRecommendations() {
+//    recommendations = CoreDataManager.shared.getRecommendations().map(TaskViewModel.init)
   }
 
   func delete(_ task: TaskViewModel) {
@@ -26,7 +34,6 @@ class TaskListViewModel: ObservableObject {
 
   func save() {
     let task = Task(context: CoreDataManager.shared.viewContext)
-    task.name = name
     CoreDataManager.shared.save()
   }
 }
@@ -40,5 +47,21 @@ struct TaskViewModel {
 
   var name: String {
     return task.name ?? ""
+  }
+
+  var image: String {
+    return task.image ?? "defaultTaskImage"
+  }
+
+  var detail: String {
+    return task.detail ?? "There ar currently no details"
+  }
+
+  var location: String {
+    return task.location ?? ""
+  }
+
+  var tags: [Tag] {
+    return task.tags?.allObjects as! [Tag]
   }
 }
