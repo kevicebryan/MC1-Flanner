@@ -17,11 +17,11 @@ class UserModel: ObservableObject {
       return
     }
     let user = User(entity: userEntity, insertInto: cdm.viewContext)
-
     user.id = UUID()
     user.username = name
     user.tags = NSSet(array: TagModel().getAllTags())
     cdm.save()
+    print("ADDED NEW USER")
   }
 
   func getAllUsers() -> [User] {

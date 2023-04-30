@@ -12,54 +12,47 @@ class UserManager: ObservableObject {
   let userModel = UserModel()
   let cdm = CoreDataManager.shared
 
-  var user: User?
-//  var userVM: UserViewModel
-//  var userTaskList: [TaskViewModel] = []
-//  var userRecommendations: [TaskViewModel] = []
+  @Published var users: [UserViewModel] = []
+  var currUser: UserViewModel? = nil
 
   init() {
-    user = userModel.getUser()
-    if user != nil {
-//      userVM = UserViewModel(user: user!)
-    }
+    getUserData()
   }
 
   func getUserData() {
-    user = userModel.getUser()
-    if user != nil {
-//      userVM = UserViewModel(user: user!)
+    users = userModel.getAllUsers().map(UserViewModel.init)
+    if !users.isEmpty {
+      currUser = users[0]
     }
   }
 
   func isUserExist() -> Bool {
-    if user == nil {
+    if users.isEmpty {
       return false
-    } else {
-      return true
     }
+    return true
   }
 
   func addNewUser(username: String) {
     cdm.seedAllData()
     userModel.addUser(name: username)
     print("new user successfully added: \(username)")
-    user = userModel.getUser()
-//    userVM = UserViewModel(user: user!)
+    getUserData()
   }
 }
 
 struct UserViewModel {
-  var user: User?
+  var user: User
 
   init(user: User) {
     self.user = user
   }
 
   var id: NSManagedObjectID {
-    return user!.objectID
+    return user.objectID
   }
 
   var username: String {
-    return user?.username ?? ""
+    return user.username ?? ""
   }
 }

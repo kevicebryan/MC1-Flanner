@@ -51,10 +51,9 @@ struct OnboardingView: View {
 
           NavigationLink(destination: PreferencesView(categoryManager: CategoryManager())) {
             CustomButton(label: "Continue")
-          }.onTapGesture {
-            // create new user and add username to CoreData
+          }.simultaneousGesture(TapGesture().onEnded {
             um.addNewUser(username: username)
-          }
+          })
         }
         .offset(y: -(Size.screenHeight/3.5))
       }
