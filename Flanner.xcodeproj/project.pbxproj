@@ -30,13 +30,14 @@
 		2D90E85829FE4535002868B1 /* AllTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85729FE4535002868B1 /* AllTaskView.swift */; };
 		2D90E85A29FE49A0002868B1 /* AdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85929FE49A0002868B1 /* AdminViewModel.swift */; };
 		2D90E85C29FE5D55002868B1 /* AdminTaskCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */; };
-		2D90E85E29FE60AB002868B1 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85D29FE60AB002868B1 /* TagViewModel.swift */; };
 		2D90E86229FEA773002868B1 /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E86129FEA773002868B1 /* CarouselCard.swift */; };
 		2D90E86629FEA966002868B1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E86529FEA966002868B1 /* MainView.swift */; };
 		2D90E86C29FEAB81002868B1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E86B29FEAB81002868B1 /* CustomButton.swift */; };
 		2D90E87729FEB504002868B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E87629FEB504002868B1 /* User.swift */; };
 		2D90E87929FEB510002868B1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E87829FEB510002868B1 /* Task.swift */; };
 		2D90E87B29FEB51A002868B1 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E87A29FEB51A002868B1 /* Tag.swift */; };
+		2D90E87D29FEBEA7002868B1 /* AllUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E87C29FEBEA7002868B1 /* AllUserView.swift */; };
+		2D90E88529FEC676002868B1 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E88429FEC676002868B1 /* TagViewModel.swift */; };
 		2DA9375829F02FD10057DD82 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9375729F02FD10057DD82 /* HelperFunctions.swift */; };
 		2DA9376129F0316E0057DD82 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9376029F0316E0057DD82 /* HomeView.swift */; };
 		2DA9376729F033720057DD82 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9376629F033720057DD82 /* TaskListViewModel.swift */; };
@@ -69,13 +70,14 @@
 		2D90E85729FE4535002868B1 /* AllTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTaskView.swift; sourceTree = "<group>"; };
 		2D90E85929FE49A0002868B1 /* AdminViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewModel.swift; sourceTree = "<group>"; };
 		2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTaskCard.swift; sourceTree = "<group>"; };
-		2D90E85D29FE60AB002868B1 /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
 		2D90E86129FEA773002868B1 /* CarouselCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
 		2D90E86529FEA966002868B1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2D90E86B29FEAB81002868B1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2D90E87629FEB504002868B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2D90E87829FEB510002868B1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		2D90E87A29FEB51A002868B1 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		2D90E87C29FEBEA7002868B1 /* AllUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUserView.swift; sourceTree = "<group>"; };
+		2D90E88429FEC676002868B1 /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
 		2DA9375729F02FD10057DD82 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		2DA9376029F0316E0057DD82 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2DA9376629F033720057DD82 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
@@ -120,7 +122,7 @@
 		2D21D2AC29EFB3D0001B7416 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2D90E85D29FE60AB002868B1 /* TagViewModel.swift */,
+				2D90E88429FEC676002868B1 /* TagViewModel.swift */,
 				2DA9376629F033720057DD82 /* TaskListViewModel.swift */,
 				2D90D31829FBCDCC00108975 /* UserViewModel.swift */,
 				2D750C2E29FA873F004C2389 /* CategoryViewModel.swift */,
@@ -222,6 +224,7 @@
 				2D90E85329FE41DF002868B1 /* AdminView.swift */,
 				2D90E85529FE451A002868B1 /* AllTagsView.swift */,
 				2D90E85729FE4535002868B1 /* AllTaskView.swift */,
+				2D90E87C29FEBEA7002868B1 /* AllUserView.swift */,
 				2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */,
 			);
 			path = Admin;
@@ -372,6 +375,7 @@
 				2D4014D829F049B600C3A656 /* DummyData.swift in Sources */,
 				2D90E86229FEA773002868B1 /* CarouselCard.swift in Sources */,
 				2D0D6FF329F1486F00E439DC /* SnapCarousel.swift in Sources */,
+				2D90E87D29FEBEA7002868B1 /* AllUserView.swift in Sources */,
 				2D750C2D29FA5B44004C2389 /* InterestBoxView.swift in Sources */,
 				2D90E86C29FEAB81002868B1 /* CustomButton.swift in Sources */,
 				2D750C2F29FA873F004C2389 /* CategoryViewModel.swift in Sources */,
@@ -382,7 +386,6 @@
 				2D27CFC529FCD0EA00B1EE67 /* SeederData.swift in Sources */,
 				2DA9375829F02FD10057DD82 /* HelperFunctions.swift in Sources */,
 				1B8705C429FD3EF0001CD1E2 /* OnboardingView.swift in Sources */,
-				2D90E85E29FE60AB002868B1 /* TagViewModel.swift in Sources */,
 				2D90E85429FE41DF002868B1 /* AdminView.swift in Sources */,
 				1B8705C929FD3FD2001CD1E2 /* ProgressBar.swift in Sources */,
 				2D90D31929FBCDCC00108975 /* UserViewModel.swift in Sources */,
@@ -393,6 +396,7 @@
 				2DA9376729F033720057DD82 /* TaskListViewModel.swift in Sources */,
 				2D09EB8029F7F6FB0086922F /* HomeCardView.swift in Sources */,
 				2D613FFE29ED7A4D0067B81E /* Prompts.swift in Sources */,
+				2D90E88529FEC676002868B1 /* TagViewModel.swift in Sources */,
 				2D56DA7629EE91E000002EE4 /* FlannerModel.xcdatamodeld in Sources */,
 				2D90E85629FE451A002868B1 /* AllTagsView.swift in Sources */,
 				2D613FFC29ED79B30067B81E /* Colors.swift in Sources */,

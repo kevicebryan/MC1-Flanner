@@ -11,18 +11,23 @@ class AdminManager: ObservableObject {
   let cdm: CoreDataManager
   let tagM = TagModel()
   let taskM = TaskModel()
+  let userM = UserModel()
 
-  var tags: [Tag]
+  var tags: [TagViewModel]
   var tasks: [TaskViewModel]
+  var users: [UserViewModel]
 
   init() {
     cdm = CoreDataManager.shared
-    tags = tagM.getAllTags()
+
+    users = userM.getAllUsers().map(UserViewModel.init)
+    tags = tagM.getAllTags().map(TagViewModel.init)
     tasks = taskM.getAllTasks().map(TaskViewModel.init)
   }
 
   func refreshData() {
-    tags = tagM.getAllTags()
+    users = userM.getAllUsers().map(UserViewModel.init)
+    tags = tagM.getAllTags().map(TagViewModel.init)
     tasks = taskM.getAllTasks().map(TaskViewModel.init)
   }
 

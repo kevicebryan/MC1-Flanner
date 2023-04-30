@@ -10,6 +10,7 @@ import Foundation
 
 class TaskListViewModel: ObservableObject {
   let taskModel = TaskModel()
+
   @Published var tasks: [TaskViewModel] = []
   @Published var recommendations: [TaskViewModel] = []
 
@@ -23,14 +24,6 @@ class TaskListViewModel: ObservableObject {
 
   func getRecommendations() {
 //    recommendations = CoreDataManager.shared.getRecommendations().map(TaskViewModel.init)
-  }
-
-  func delete(_ task: TaskViewModel) {
-    let currTask = taskModel.getTaskById(id: task.id)
-
-    if let currTask = currTask {
-      taskModel.deleteTask(task: currTask)
-    }
   }
 }
 

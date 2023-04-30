@@ -38,12 +38,16 @@ struct AdminView: View {
 
         HStack(spacing: 32) {
           NavigationLink(destination: AllTagsView(am: am)) {
-            Text("View All Tags").foregroundColor(.blue)
+            Text("View Tags").foregroundColor(.blue)
           }
           NavigationLink(destination: AllTaskView(am: am)) {
-            Text("View All Tasks")
+            Text("View Tasks")
           }
-        }
+
+          NavigationLink(destination: AllUserView(am: am)) {
+            Text("View Users")
+          }
+        }.padding(.horizontal, 16)
         Spacer()
       }.padding(.top, 100)
     }

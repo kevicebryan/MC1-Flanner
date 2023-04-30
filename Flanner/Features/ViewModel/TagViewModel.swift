@@ -8,9 +8,21 @@
 import CoreData
 import Foundation
 
-struct TagViewModel {
+class TagListViewModel: ObservableObject {
   let tagModel = TagModel()
 
+  @Published var tags: [TagViewModel] = []
+
+  init() {
+    getAllTags()
+  }
+
+  func getAllTags() {
+    tags = tagModel.getAllTags().map(TagViewModel.init)
+  }
+}
+
+struct TagViewModel {
   let tag: Tag
 
   var id: NSManagedObjectID {
@@ -23,5 +35,9 @@ struct TagViewModel {
 
   var color: String {
     return tag.color ?? "d9d9d9"
+  }
+
+  var weight: Int {
+    return Int(tag.weight) ?? -1
   }
 }

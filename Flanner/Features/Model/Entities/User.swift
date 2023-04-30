@@ -18,9 +18,20 @@ class UserModel: ObservableObject {
     }
     let user = User(entity: userEntity, insertInto: cdm.viewContext)
 
+    user.id = UUID()
     user.username = name
     user.tags = NSSet(array: TagModel().getAllTags())
     cdm.save()
+  }
+
+  func getAllUsers() -> [User] {
+    let req: NSFetchRequest<User> = User.fetchRequest()
+    do {
+      return try cdm.viewContext.fetch(req)
+    } catch {
+      print("Error Fetching Tags")
+      return []
+    }
   }
 
   func getUser() -> User? {

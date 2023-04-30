@@ -15,7 +15,7 @@ struct AllTagsView: View {
       Text("All Tags").font(.title).fontWeight(.heavy)
       ForEach(am.tags, id: \.self.id) { tag in
         HStack {
-          Text(tag.name ?? "---")
+          Text(tag.name)
           Text("\(tag.weight)").font(.caption2)
         }.foregroundColor(Color(hex: tag.color ?? "d9d9d9")).padding(.all, 2)
       }
