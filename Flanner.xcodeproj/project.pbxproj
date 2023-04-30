@@ -31,6 +31,7 @@
 		2D90E85A29FE49A0002868B1 /* AdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85929FE49A0002868B1 /* AdminViewModel.swift */; };
 		2D90E85C29FE5D55002868B1 /* AdminTaskCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */; };
 		2D90E85E29FE60AB002868B1 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85D29FE60AB002868B1 /* TagViewModel.swift */; };
+		2D90E86229FEA773002868B1 /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E86129FEA773002868B1 /* CarouselCard.swift */; };
 		2DA9375829F02FD10057DD82 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9375729F02FD10057DD82 /* HelperFunctions.swift */; };
 		2DA9376129F0316E0057DD82 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9376029F0316E0057DD82 /* HomeView.swift */; };
 		2DA9376729F033720057DD82 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA9376629F033720057DD82 /* TaskListViewModel.swift */; };
@@ -64,6 +65,7 @@
 		2D90E85929FE49A0002868B1 /* AdminViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewModel.swift; sourceTree = "<group>"; };
 		2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTaskCard.swift; sourceTree = "<group>"; };
 		2D90E85D29FE60AB002868B1 /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
+		2D90E86129FEA773002868B1 /* CarouselCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
 		2DA9375729F02FD10057DD82 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		2DA9376029F0316E0057DD82 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2DA9376629F033720057DD82 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				2D0D6FF229F1486F00E439DC /* SnapCarousel.swift */,
+				2D90E86129FEA773002868B1 /* CarouselCard.swift */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D4014D829F049B600C3A656 /* DummyData.swift in Sources */,
+				2D90E86229FEA773002868B1 /* CarouselCard.swift in Sources */,
 				2D0D6FF329F1486F00E439DC /* SnapCarousel.swift in Sources */,
 				2D750C2D29FA5B44004C2389 /* InterestBoxView.swift in Sources */,
 				2D750C2F29FA873F004C2389 /* CategoryViewModel.swift in Sources */,
