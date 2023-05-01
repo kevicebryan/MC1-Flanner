@@ -42,7 +42,7 @@ struct HomeCardView: View {
         }
       }.padding(.all, 8).padding(.leading, -16).frame(width: 195).padding(.trailing, 16).padding(.leading, 4)
     }.background(.white).cornerRadius(20).frame(width: 351, height: 132)
-      .shadow(color: Color.black.opacity(0.15), radius: 8, x: 4, y: 6)
+      .shadow(color: Color.black.opacity(0.05), radius: 20, x: 0, y: 20)
 //      .overlay {
 //        RoundedRectangle(cornerRadius: 8).stroke(Color.black).opacity(0.2)
 //      }
