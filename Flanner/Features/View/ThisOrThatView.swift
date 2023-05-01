@@ -123,21 +123,26 @@ struct ThisOrThatView: View {
                     }
                 }
                 Spacer()
-                Button{
-                    index += 1
-                    isSelected1 = false
-                    isSelected2 = false
-                } label: {
-                    if(!isSelected1 && !isSelected2){
-                        CustomButton(label: "Next", isDisabled: true)
+                if(index != 4){
+                    Button{
+                        index += 1
+                        isSelected1 = false
+                        isSelected2 = false
+                    } label: {
+                        CustomButton(label: "Next", isDisabled: (!isSelected1 && !isSelected2))
+                       
                     }
-                    else{
-                        CustomButton(label: "Next")
-                    }
-                   
+                    .disabled(!isSelected1 && !isSelected2)
+                        .padding()
                 }
-                .disabled(!isSelected1 && !isSelected2)
-                    .padding()
+                else{
+                    NavigationLink(destination: HomeView().navigationBarBackButtonHidden(true)){
+                        CustomButton(label: "Continue", isDisabled: (!isSelected1 && !isSelected2))
+                            .disabled(!isSelected1 && !isSelected2)
+                                .padding()
+                    }
+                }
+                
             }
         }
     }
@@ -145,6 +150,6 @@ struct ThisOrThatView: View {
 
 struct ThisOrThatView_Previews: PreviewProvider {
     static var previews: some View {
-        ThisOrThatView(index: 0)
+        ThisOrThatView(index: 4)
     }
 }
