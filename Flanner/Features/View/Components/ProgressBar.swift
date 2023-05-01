@@ -11,13 +11,13 @@ struct ProgressBar: View {
     @Binding var index: Int
     var body: some View {
         HStack {
-            ForEach(0..<index){ i in
+            ForEach(0..<index+1, id: \.self){ i in
                 Rectangle()
                     .frame(width: Size.screenWidth/10, height: 3)
                     .cornerRadius(20)
                     .foregroundColor(Colors.dYellow)
             }
-            ForEach(0..<5-index){ i in
+            ForEach(0..<4-index, id: \.self){ i in
                 Rectangle()
                     .frame(width: Size.screenWidth/10, height: 3)
                     .cornerRadius(20)
@@ -29,6 +29,6 @@ struct ProgressBar: View {
 
 struct ProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBar(index: .constant(2))
+        ProgressBar(index: .constant(0))
     }
 }
