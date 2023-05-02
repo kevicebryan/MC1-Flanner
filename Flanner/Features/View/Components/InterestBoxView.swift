@@ -18,7 +18,7 @@ struct CategoryBoxView: View {
         Text("\(category.name)")
       }.frame(width: 130, height: 130).background(
         !category.selected ? Colors.lBlue : Colors.turq).cornerRadius(16)
-        .foregroundColor(!category.selected ? Colors.turq : Colors.cream)
+        .foregroundColor(!category.selected ? Colors.turq : Colors.orange)
         .shadow(color: Color.black.opacity(!category.selected ? 0 : 0.2), radius: 4, x: 4, y: 6)
         .onTapGesture {
           category.toggleSelected()

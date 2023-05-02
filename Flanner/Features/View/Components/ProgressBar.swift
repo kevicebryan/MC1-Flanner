@@ -15,7 +15,7 @@ struct ProgressBar: View {
                 Rectangle()
                     .frame(width: Size.screenWidth/10, height: 3)
                     .cornerRadius(20)
-                    .foregroundColor(Colors.dYellow)
+                    .foregroundColor(Colors.cream)
             }
             ForEach(0..<5-index){ i in
                 Rectangle()

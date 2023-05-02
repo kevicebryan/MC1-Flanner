@@ -18,9 +18,10 @@ struct CustomButton: View {
 
   var body: some View {
     Text("\(label)")
-      .foregroundColor(.white)
-      .frame(width: CGFloat(width), height: 40, alignment: .center)
-      .background(Colors.dYellow)
+      .fontWeight(.semibold).font(.footnote)
+      .foregroundColor(Colors.creamTint)
+      .frame(width: CGFloat(width), height: 48, alignment: .center)
+      .background(Colors.yellow)
       .cornerRadius(20, antialiased: true)
       .padding()
   }

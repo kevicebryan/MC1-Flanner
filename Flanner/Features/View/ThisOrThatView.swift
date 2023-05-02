@@ -56,9 +56,9 @@ struct ThisOrThatView: View {
                 .resizable()
                 .frame(width: 70, height: 100, alignment: .center)
                 .padding()
-                .foregroundColor(Colors.cream)
+                .foregroundColor(Colors.orange)
               Text("Sports-Oriented Activities")
-                .foregroundColor(Colors.cream)
+                .foregroundColor(Colors.orange)
                 .padding()
                 .font(.system(size: 16, weight: .bold))
             }
@@ -104,9 +104,9 @@ struct ThisOrThatView: View {
                 .resizable()
                 .frame(width: 70, height: 100, alignment: .center)
                 .padding()
-                .foregroundColor(Colors.cream)
+                .foregroundColor(Colors.orange)
               Text("Sports-Oriented Activities")
-                .foregroundColor(Colors.cream)
+                .foregroundColor(Colors.orange)
                 .padding()
                 .font(.system(size: 16, weight: .bold))
             }

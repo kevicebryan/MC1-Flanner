@@ -14,11 +14,17 @@ struct CarouselCard: View {
     ZStack {
       Color.red
       Image(task.image).resizable().scaledToFill()
+
+      VStack(spacing: 0) {
+        Spacer()
+        LinearGradient(colors: [.black.opacity(0.85), .black.opacity(0.75), .black.opacity(0.2), .white.opacity(0)], startPoint: .bottom, endPoint: .top).frame(height: 80)
+      }
+
       VStack(alignment: .leading) {
         Spacer()
-        Text(task.name).foregroundColor(Colors.lYellow).fontWeight(.bold).font(.largeTitle).lineLimit(1)
+        Text(task.name).foregroundColor(Colors.yellow).fontWeight(.bold).font(.largeTitle).lineLimit(1)
         if task.location != "" && !task.location.isEmpty {
-          Text(task.location).foregroundColor(Colors.lYellow).fontWeight(.regular).font(.caption)
+          Text(task.location).foregroundColor(Colors.yellow).fontWeight(.regular).font(.caption)
         }
       }.padding(.bottom, 10).frame(maxWidth: 300).padding(.leading, -16).multilineTextAlignment(.leading)
     }.frame(width: 300, height: 220).cornerRadius(12)
