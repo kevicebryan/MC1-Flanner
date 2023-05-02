@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
   @State var selectedIndex = 0
   @State var isPlanning = false
+//  @State var isPlanningNest = false
   @StateObject var um: UserManager
 
   // MARK: Tab Bar Data
@@ -27,16 +28,18 @@ struct ContentView: View {
 
         Spacer()
           .fullScreenCover(isPresented: $isPlanning) {
-            VStack(alignment: .leading, spacing: -2) {
-              HStack {
-                Button {
-                  isPlanning.toggle()
-                } label: {
-                  Image(systemName: "xmark").font(.system(size: 24, weight: .semibold)).foregroundColor(.white)
-                }
-              }.padding(.horizontal).padding(.vertical, 4)
-              PlandBridgeView()
-            }.background(Colors.turq)
+            NavigationView {
+              VStack(alignment: .leading, spacing: -2) {
+                HStack {
+                  Button {
+                    isPlanning.toggle()
+                  } label: {
+                    Image(systemName: "xmark").font(.system(size: 24, weight: .semibold)).foregroundColor(Color.yellow)
+                  }
+                }.padding(.horizontal).padding(.vertical, 4)
+                PlandBridgeView()
+              }.background(Colors.turq)
+            }
           }
 
         // MARK: OTHER VIEWS
