@@ -33,6 +33,7 @@ public let tagSeeds = [tagSeed(name: "Indoor", color: "5C5258", emoji: ""),
                        tagSeed(name: "Nature", color: "2A904F", emoji: ""),
                        tagSeed(name: "Travel", color: "60DCF7", emoji: ""),
                        tagSeed(name: "Crowded", color: "5DFDBC", emoji: ""),
+                       tagSeed(name: "Relaxing", color: "5DFDBC", emoji: ""),
                        tagSeed(name: "Private", color: "EEFD5D", emoji: "")]
 
 public let taskSeeds = [

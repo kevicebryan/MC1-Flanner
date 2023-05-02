@@ -13,21 +13,21 @@ struct CategoryBoxView: View {
 
   var body: some View {
     if categoryManager.selectedCategory < 5 || category.selected {
-        VStack {
+      VStack {
         Text("\(category.name)")
-                .frame(width: 100, alignment: .trailing)
-              .padding()
-          Spacer()
+          .frame(width: 100, alignment: .trailing)
+          .padding()
+        Spacer()
       }.frame(width: 130, height: 130)
-            .overlay(
-                symbolInPreferencesView(symbol: category.symbol)
-              )
-            .background(
-        !category.selected ? Colors.lBlue : Colors.turq).cornerRadius(16)
+        .overlay(
+          symbolInPreferencesView(symbol: category.symbol)
+        )
+        .background(
+          !category.selected ? Colors.lBlue : Colors.turq).cornerRadius(16)
         .foregroundColor(!category.selected ? Colors.turq : Colors.lBlue)
         .shadow(color: Color.black.opacity(!category.selected ? 0 : 0.2), radius: 4, x: 4, y: 6)
         .onTapGesture {
-          category.toggleSelected()
+          category.selected.toggle()
           if category.selected {
             categoryManager.selectedCategory += 1
           } else {
@@ -40,15 +40,15 @@ struct CategoryBoxView: View {
     } else {
       VStack {
         Text("\(category.name)")
-              .frame(width: 100, alignment: .trailing)
-              .padding()
-          Spacer()
+          .frame(width: 100, alignment: .trailing)
+          .padding()
+        Spacer()
       }.frame(width: 130, height: 130)
-            .overlay(
-                symbolInPreferencesView(symbol: category.symbol)
-              )
-            .background(
-        Colors.lDisabled).cornerRadius(16)
+        .overlay(
+          symbolInPreferencesView(symbol: category.symbol)
+        )
+        .background(
+          Colors.lDisabled).cornerRadius(16)
         .foregroundColor(Colors.dDdisabled)
         .shadow(color: Color.black.opacity(!category.selected ? 0 : 0.2), radius: 4, x: 4, y: 6)
     }
@@ -57,7 +57,7 @@ struct CategoryBoxView: View {
 
 struct CategoryBoxView_Previews: PreviewProvider {
   static var previews: some View {
-      CategoryBoxView(category: .constant(CategoryManager().categories[6])).environmentObject(CategoryManager())
+    CategoryBoxView(category: .constant(CategoryManager().categories[6])).environmentObject(CategoryManager())
 //    PreferencesView(categoryManager: CategoryManager())
   }
 }

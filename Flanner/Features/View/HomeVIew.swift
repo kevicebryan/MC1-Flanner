@@ -42,7 +42,7 @@ struct HomeView: View {
           }.padding(.horizontal)
         }.frame(maxWidth: .infinity, maxHeight: 480)
       }
-    }.frame(maxHeight: .infinity, alignment: .top)
+    }.frame(maxHeight: .infinity, alignment: .top).navigationBarBackButtonHidden(true)
   }
 }
 

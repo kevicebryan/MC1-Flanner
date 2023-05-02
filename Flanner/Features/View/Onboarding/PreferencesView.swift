@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+func likeSelectedCategories(categories: [Category]) {
+  for category in categories {
+    UserModel().updateUserTag(tagName: category.tagName, like: category.selected)
+  }
+}
+
 struct PreferencesView: View {
   @StateObject var categoryManager = CategoryManager()
   @State var categories: [Category]
@@ -40,8 +46,17 @@ struct PreferencesView: View {
         }
       }.padding(.horizontal, 40)
 
-      NavigationLink(destination: ThisOrThatView()) {
-        CustomButton(label: "Next", width: 300)
+      if categoryManager.selectedCategory < 1 {
+        CustomButton(label: "Next", width: 300, isDisabled: true)
+
+      } else {
+        NavigationLink(destination: ThisOrThatView()
+          .navigationBarBackButtonHidden(true))
+        {
+          CustomButton(label: "Next", width: 300)
+        }.simultaneousGesture(TapGesture().onEnded {
+          likeSelectedCategories(categories: categories)
+        })
       }
 
     }.environmentObject(categoryManager)

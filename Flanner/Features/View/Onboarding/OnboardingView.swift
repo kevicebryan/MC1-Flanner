@@ -40,6 +40,7 @@ struct OnboardingView: View {
             .padding().padding(.top, -28).opacity(0.7)
 
           Text("Insert your full name").foregroundColor(Colors.creamTint).fontWeight(.semibold).padding(.bottom, -8)
+
           TextField(
             "",
             text: $username
@@ -47,9 +48,9 @@ struct OnboardingView: View {
           .multilineTextAlignment(.center)
           .textFieldStyle(.roundedBorder)
           .cornerRadius(15)
-          .frame(width: Size.screenWidth/1.3, height: 48)
+          .frame(width: Size.screenWidth/1.3, height: 48).preferredColorScheme(.light)
 
-          NavigationLink(destination: PreferencesView(categoryManager: CategoryManager())) {
+          NavigationLink(destination: PreferencesView(categoryManager: CategoryManager()).navigationBarBackButtonHidden(true)) {
             CustomButton(label: "Continue")
           }.simultaneousGesture(TapGesture().onEnded {
             um.addNewUser(username: username)

@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+// MARK: Function to Update Corresponding Tag
+
+private func updateThisThatTag(index: Int, selectedThisThat: Int) {
+  UserModel().updateUserTag(tagName:
+    Prompt.thisOrthatTags[index][selectedThisThat], like: true)
+}
+
 struct ThisOrThatView: View {
   let buttonWidth = Size.screenWidth/1.3
   let buttonHeight = Size.screenHeight/5
@@ -55,13 +62,11 @@ struct ThisOrThatView: View {
               Image(systemName: "\(Prompt.thisOrThatSymbols[index][0])")
                 .font(.system(size: 60))
                 .padding()
-                .foregroundColor(Colors.cream)
               Text("\(Prompt.thisOrThatChoices[index][0])")
-                .foregroundColor(Colors.cream)
                 .padding()
 //                                .frame(width: buttonWidth/2)
                 .font(.system(size: 16, weight: .bold))
-            }
+            }.foregroundColor(Colors.lBlue)
           }
         }
         .onTapGesture {
@@ -74,7 +79,7 @@ struct ThisOrThatView: View {
           }
         }
         .frame(width: buttonWidth, height: buttonHeight, alignment: .center)
-        .padding()
+        .padding().animation(.easeInOut, value: isSelected1)
                 
         ZStack {
           if !isSelected2 {
@@ -103,13 +108,11 @@ struct ThisOrThatView: View {
               Image(systemName: "\(Prompt.thisOrThatSymbols[index][1])")
                 .font(.system(size: 60))
                 .padding()
-                .foregroundColor(Colors.cream)
               Text("\(Prompt.thisOrThatChoices[index][1])")
-                .foregroundColor(Colors.cream)
                 .padding()
 //                                .frame(width: buttonWidth/2)
                 .font(.system(size: 16, weight: .bold))
-            }
+            }.foregroundColor(Colors.lBlue)
           }
         }
         .frame(width: buttonWidth, height: buttonHeight, alignment: .center)
@@ -121,33 +124,49 @@ struct ThisOrThatView: View {
           else {
             isSelected2 = true
           }
-        }
+        }.animation(.easeInOut, value: isSelected2)
         Spacer()
         if index != 4 {
           Button {
             index += 1
             isSelected1 = false
             isSelected2 = false
+            
+            // MARK: Update Corresponding Tag Weight:
+
+            updateThisThatTag(index: index, selectedThisThat: isSelected1 ? 0 : 1)
+            
           } label: {
-            CustomButton(label: "Next", isDisabled: !isSelected1 && !isSelected2)
+            CustomButton(label: "Next", width: 300, isDisabled: !isSelected1 && !isSelected2)
           }
           .disabled(!isSelected1 && !isSelected2)
           .padding()
         }
         else {
-          NavigationLink(destination: HomeView(um: UserManager()).navigationBarBackButtonHidden(true)) {
-            CustomButton(label: "Continue", isDisabled: !isSelected1 && !isSelected2)
+          if isSelected1 || isSelected2 {
+            NavigationLink(destination: HomeView(um: UserManager())
+              .navigationBarBackButtonHidden(true)
+            ) {
+              CustomButton(label: "Continue", width: 300, isDisabled: !isSelected1 && !isSelected2)
+                .disabled(!isSelected1 && !isSelected2)
+                .padding()
+            }.simultaneousGesture(TapGesture().onEnded {
+              updateThisThatTag(index: index, selectedThisThat: isSelected1 ? 0 : 1)
+            })
+          }
+          else {
+            CustomButton(label: "Continue", width: 300, isDisabled: !isSelected1 && !isSelected2)
               .disabled(!isSelected1 && !isSelected2)
               .padding()
           }
         }
-      }
+      }.animation(.spring(), value: index)
     }
   }
 }
 
 struct ThisOrThatView_Previews: PreviewProvider {
   static var previews: some View {
-    ThisOrThatView(index: 4)
+    ThisOrThatView(index: 1)
   }
 }

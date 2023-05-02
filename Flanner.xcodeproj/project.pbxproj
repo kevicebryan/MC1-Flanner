@@ -137,8 +137,8 @@
 			children = (
 				2D90E87529FEB4F4002868B1 /* Entities */,
 				2D4014D729F049B600C3A656 /* DummyData.swift */,
-				2D27CFC429FCD0EA00B1EE67 /* SeederData.swift */,
 				2D750C2A29FA5907004C2389 /* CategoryModel.swift */,
+				2D27CFC429FCD0EA00B1EE67 /* SeederData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

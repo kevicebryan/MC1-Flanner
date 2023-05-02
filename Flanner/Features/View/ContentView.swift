@@ -34,7 +34,7 @@ struct ContentView: View {
                   Button {
                     isPlanning.toggle()
                   } label: {
-                    Image(systemName: "xmark").font(.system(size: 24, weight: .semibold)).foregroundColor(Color.yellow)
+                    Image(systemName: "xmark").font(.system(size: 24, weight: .semibold)).foregroundColor(Colors.lBlueTint)
                   }
                 }.padding(.horizontal).padding(.vertical, 4)
                 PlandBridgeView()

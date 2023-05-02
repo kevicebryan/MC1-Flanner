@@ -25,6 +25,7 @@ struct CustomButton: View {
       .background(isDisabled ? Colors.yellowTint : Colors.yellow)
       .cornerRadius(20, antialiased: true)
       .padding()
+      .animation(.easeInOut, value: isDisabled)
   }
 }
 
