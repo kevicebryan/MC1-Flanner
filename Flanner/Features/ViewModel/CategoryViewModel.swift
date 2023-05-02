@@ -17,10 +17,10 @@ class CategoryManager: ObservableObject {
       Category(name: "Music", symbol: "music.quarternote.3", tagName: "Music"),
       Category(name: "Food", symbol: "fork.knife", tagName: "Food"),
       Category(name: "Travel", symbol: "airplane", tagName: "Travel"),
-      Category(name: "Movie", symbol: "popcorn", tagName: "Movie"),
-      Category(name: "Art", symbol: "paintpalette", tagName: "Art"),
-      Category(name: "Gaming", symbol: "gamecontroller", tagName: "Gaming"),
-      Category(name: "Nature", symbol: "leaf", tagName: "Nature"),
+      Category(name: "Movie", symbol: "popcorn.fill", tagName: "Movie"),
+      Category(name: "Art", symbol: "paintbrush.fill", tagName: "Art"),
+      Category(name: "Gaming", symbol: "gamecontroller.fill", tagName: "Gaming"),
+      Category(name: "Nature", symbol: "leaf.fill", tagName: "Nature"),
     ]
   }
 }
