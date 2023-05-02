@@ -48,8 +48,7 @@ class TaskModel: ObservableObject {
 //    }
   }
 
-  func addTask(name: String, loc: String = "Jakarta", tagNames: [String], detail: String, img: String)
-  {
+  func addTask(name: String, loc: String = "", tagNames: [String], detail: String, img: String) {
     guard let taskEntity = NSEntityDescription.entity(forEntityName: "Task", in: cdm.viewContext)
     else {
       return

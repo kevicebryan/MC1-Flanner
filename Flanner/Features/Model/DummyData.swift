@@ -11,7 +11,7 @@ import SwiftUI
 struct DummyTask: Hashable, Identifiable {
   let id = UUID()
   var name: String = "Long Task Name"
-  var location: String = "The Breeze, BSD City"
+  var location: String = "Ada Location"
   var image: String = "dummyImage"
   var tags: [DummyTag] = [DummyTag(), DummyTag()]
 }

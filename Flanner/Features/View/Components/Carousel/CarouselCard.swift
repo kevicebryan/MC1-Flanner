@@ -16,10 +16,12 @@ struct CarouselCard: View {
       Image(task.image).resizable().scaledToFill()
       VStack(alignment: .leading) {
         Spacer()
-        Text(task.name).foregroundColor(.white).fontWeight(.bold).font(.largeTitle).lineLimit(1)
-        Text(task.location).foregroundColor(.white).fontWeight(.regular).font(.caption)
-      }.padding(.bottom, 8).frame(maxWidth: 300).padding(.leading, -16).multilineTextAlignment(.leading)
-    }.frame(width: 300, height: 200).cornerRadius(12)
+        Text(task.name).foregroundColor(Colors.lYellow).fontWeight(.bold).font(.largeTitle).lineLimit(1)
+        if task.location != "" && !task.location.isEmpty {
+          Text(task.location).foregroundColor(Colors.lYellow).fontWeight(.regular).font(.caption)
+        }
+      }.padding(.bottom, 10).frame(maxWidth: 300).padding(.leading, -16).multilineTextAlignment(.leading)
+    }.frame(width: 300, height: 220).cornerRadius(12)
   }
 }
 
