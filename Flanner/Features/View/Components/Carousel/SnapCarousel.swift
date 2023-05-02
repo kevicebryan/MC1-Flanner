@@ -92,16 +92,16 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
           )
       }.animation(.easeInOut, value: offset == 0).padding(.bottom, 8)
 
-      HStack(spacing: 4) {
+      HStack(spacing: 8) {
         ForEach(dummyTasks.indices, id: \.self) {
           index in
           Rectangle().fill(Colors.turq.opacity(currIdx == index ? 0.8 : 0.1))
-            .frame(width: currIdx == index ? 20 : 8, height: currIdx == index ? 5 : 4)
+            .frame(width: currIdx == index ? 20 : 6, height: currIdx == index ? 6 : 6)
             .animation(.easeIn(duration: 0.2), value: currIdx == index)
             .cornerRadius(8)
         }
       }
-    }.frame(maxHeight: 224)
+    }.frame(maxHeight: 240)
   }
 }
 

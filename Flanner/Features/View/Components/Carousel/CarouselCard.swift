@@ -22,9 +22,9 @@ struct CarouselCard: View {
 
       VStack(alignment: .leading) {
         Spacer()
-        Text(task.name).foregroundColor(Colors.yellow).fontWeight(.bold).font(.largeTitle).lineLimit(1)
+        Text(task.name).foregroundColor(Colors.creamTint).fontWeight(.bold).font(.largeTitle).lineLimit(1)
         if task.location != "" && !task.location.isEmpty {
-          Text(task.location).foregroundColor(Colors.yellow).fontWeight(.regular).font(.caption)
+          Text(task.location).foregroundColor(Colors.creamTint).fontWeight(.regular).font(.caption)
         }
       }.padding(.bottom, 10).frame(maxWidth: 300).padding(.leading, -16).multilineTextAlignment(.leading)
     }.frame(width: 300, height: 220).cornerRadius(12)
