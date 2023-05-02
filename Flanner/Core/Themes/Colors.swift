@@ -31,5 +31,6 @@ struct Colors {
   static let dDdisabled = Color(hex: "a8a8a8")
 
   static let white = Color.white
+  static let darkGray = Color.gray
   static let black = Color.black
 }
