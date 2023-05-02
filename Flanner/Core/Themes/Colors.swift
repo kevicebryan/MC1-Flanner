@@ -27,8 +27,8 @@ struct Colors {
   static let creamShade = Color(hex: "D38800")
   static let yellowShade = Color(hex: "E7A661")
 
-  static let lDisabled = Color(hex: "d3d3d3")
-  static let dDdisabled = Color(hex: "a8a8a8")
+  static let lDisabled = Color(hex: "E0E0E0")
+  static let dDdisabled = Color(hex: "A8A8A8")
 
   static let white = Color.white
   static let darkGray = Color.gray

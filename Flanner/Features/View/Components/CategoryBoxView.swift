@@ -42,17 +42,15 @@ struct CategoryBoxView: View {
         Text("\(category.name)")
               .frame(width: 100, alignment: .trailing)
               .padding()
-              .opacity(0.7)
           Spacer()
       }.frame(width: 130, height: 130)
             .overlay(
                 symbolInPreferencesView(symbol: category.symbol)
               )
             .background(
-        Colors.lBlue).cornerRadius(16)
-        .foregroundColor(Colors.turq)
+        Colors.lDisabled).cornerRadius(16)
+        .foregroundColor(Colors.dDdisabled)
         .shadow(color: Color.black.opacity(!category.selected ? 0 : 0.2), radius: 4, x: 4, y: 6)
-        .opacity(0.7)
     }
   }
 }
