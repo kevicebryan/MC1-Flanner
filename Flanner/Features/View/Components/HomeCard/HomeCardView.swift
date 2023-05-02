@@ -51,6 +51,6 @@ struct HomeCardView: View {
 
 struct HomeCardView_Previews: PreviewProvider {
   static var previews: some View {
-    HomeView()
+    HomeView(um: UserManager())
   }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
   @State var selectedIndex = 0
   @State var isPlanning = false
+  @StateObject var um: UserManager
 
   // MARK: Tab Bar Data
 
@@ -41,7 +42,7 @@ struct ContentView: View {
         // MARK: OTHER VIEWS
 
         switch selectedIndex {
-        case 0: HomeView()
+        case 0: HomeView(um: UserManager())
         case 2: OnboardingView(um: UserManager())
         default:
           Text("Page not Found!")
@@ -83,7 +84,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    ContentView(um: UserManager())
   }
 }
 

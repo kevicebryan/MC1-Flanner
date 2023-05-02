@@ -12,7 +12,7 @@ struct MainView: View {
 
   var body: some View {
     if um.isUserExist() {
-      ContentView()
+      ContentView(um: um)
     } else {
       OnboardingView(um: um)
     }

@@ -9,14 +9,14 @@ import SwiftUI
 
 struct HomeView: View {
   @State var currIdx: Int = 0
-
+  @ObservedObject var um: UserManager
   // total 6 recommendation --> 3 untuk carousel, 3 untuk card
 
   var body: some View {
     NavigationView {
       VStack {
         HStack(spacing: 0) {
-          Text("Welcome John Wick! 👋").font(.title2).fontWeight(.bold)
+          Text("Welcome \(um.currUser?.username ?? "No Name") 👋").font(.title2).fontWeight(.bold)
           Spacer()
         }.padding(.horizontal, 32).padding(.top, 16)
 
@@ -48,6 +48,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
   static var previews: some View {
-    HomeView()
+    HomeView(um: UserManager())
   }
 }

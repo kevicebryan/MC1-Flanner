@@ -29,17 +29,17 @@ struct OnboardingView: View {
           Text("Welcome to Your Flanner!")
             .font(.system(size: 26))
             .bold()
-            .foregroundColor(Colors.lYellow)
+            .foregroundColor(Colors.creamTint)
             .padding()
 
           Text("Let's create fun and quality events together with Flanner!")
             .frame(width: Size.screenWidth/1.2)
             .multilineTextAlignment(.center)
             .fixedSize()
-            .foregroundColor(Colors.lYellow)
+            .foregroundColor(Colors.creamTint)
             .padding()
 
-          Text("Username").foregroundColor(Colors.lYellow)
+          Text("Username").foregroundColor(Colors.creamTint).fontWeight(.semibold).padding(.bottom, -2)
           TextField(
             "",
             text: $username
