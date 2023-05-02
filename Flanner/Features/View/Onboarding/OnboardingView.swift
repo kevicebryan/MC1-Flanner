@@ -50,11 +50,20 @@ struct OnboardingView: View {
           .cornerRadius(15)
           .frame(width: Size.screenWidth/1.3, height: 48).preferredColorScheme(.light)
 
-          NavigationLink(destination: PreferencesView(categoryManager: CategoryManager()).navigationBarBackButtonHidden(true)) {
-            CustomButton(label: "Continue")
-          }.simultaneousGesture(TapGesture().onEnded {
-            um.addNewUser(username: username)
-          })
+          if username == "" || username == " " {
+            CustomButton(label: "Continue", isDisabled: true)
+          } else {
+            NavigationLink(destination: PreferencesView(
+              categoryManager:
+              CategoryManager(), um: um
+            ).navigationBarBackButtonHidden(true)) {
+              CustomButton(label: "Continue")
+            }.simultaneousGesture(TapGesture().onEnded {
+//              um.addNewUser(name: username)
+              um.setUsername(name: username)
+              print("UM.Username:  \(um.username)")
+            })
+          }
         }
         .offset(y: -(Size.screenHeight/3.5))
       }

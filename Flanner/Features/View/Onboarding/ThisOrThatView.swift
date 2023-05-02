@@ -17,6 +17,8 @@ private func updateThisThatTag(index: Int, selectedThisThat: Int) {
 struct ThisOrThatView: View {
   let buttonWidth = Size.screenWidth/1.3
   let buttonHeight = Size.screenHeight/5
+  
+  @ObservedObject var um: UserManager
   @State var index = 0
   @State var isSelected1 = false
   @State var isSelected2 = false
@@ -144,7 +146,7 @@ struct ThisOrThatView: View {
         }
         else {
           if isSelected1 || isSelected2 {
-            NavigationLink(destination: HomeView(um: UserManager())
+            NavigationLink(destination: ContentView(um: um)
               .navigationBarBackButtonHidden(true)
             ) {
               CustomButton(label: "Continue", width: 300, isDisabled: !isSelected1 && !isSelected2)
@@ -152,6 +154,7 @@ struct ThisOrThatView: View {
                 .padding()
             }.simultaneousGesture(TapGesture().onEnded {
               updateThisThatTag(index: index, selectedThisThat: isSelected1 ? 0 : 1)
+              um.addNewUser()
             })
           }
           else {
@@ -167,6 +170,6 @@ struct ThisOrThatView: View {
 
 struct ThisOrThatView_Previews: PreviewProvider {
   static var previews: some View {
-    ThisOrThatView(index: 1)
+    ThisOrThatView(um: UserManager(), index: 1)
   }
 }

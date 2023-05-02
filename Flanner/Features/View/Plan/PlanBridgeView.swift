@@ -30,7 +30,7 @@ struct PlandBridgeView: View {
           .multilineTextAlignment(.center)
           .frame(width: 300)
 
-        NavigationLink(destination: ThisOrThatView()
+        NavigationLink(destination: ThisOrThatView(um: UserManager())
         ) { CustomButton(label: "Start", width: 280)
         }
         .padding(.top, 20)

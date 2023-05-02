@@ -7,20 +7,23 @@
 
 import SwiftUI
 
-func likeSelectedCategories(categories: [Category]) {
+private func likeSelectedCategories(categories: [Category]) {
   for category in categories {
     UserModel().updateUserTag(tagName: category.tagName, like: category.selected)
   }
 }
 
 struct PreferencesView: View {
-  @StateObject var categoryManager = CategoryManager()
+  @ObservedObject var um: UserManager
+  @ObservedObject var categoryManager = CategoryManager()
+
   @State var categories: [Category]
   @State var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
   @State var full: Bool = false
 
-  init(categoryManager: CategoryManager) {
+  init(categoryManager: CategoryManager, um: UserManager) {
     self.categories = categoryManager.categories
+    self.um = um
   }
 
   var body: some View {
@@ -50,7 +53,7 @@ struct PreferencesView: View {
         CustomButton(label: "Next", width: 300, isDisabled: true)
 
       } else {
-        NavigationLink(destination: ThisOrThatView()
+        NavigationLink(destination: ThisOrThatView(um: um)
           .navigationBarBackButtonHidden(true))
         {
           CustomButton(label: "Next", width: 300)
@@ -65,6 +68,6 @@ struct PreferencesView: View {
 
 struct PreferencesView_Previews: PreviewProvider {
   static var previews: some View {
-    PreferencesView(categoryManager: CategoryManager())
+    PreferencesView(categoryManager: CategoryManager(), um: UserManager())
   }
 }

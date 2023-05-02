@@ -13,10 +13,25 @@ class UserManager: ObservableObject {
   let cdm = CoreDataManager.shared
 
   @Published var users: [UserViewModel] = []
+  var username = "Anonymous"
   var currUser: UserViewModel? = nil
 
   init() {
     getUserData()
+  }
+
+  func addNewUser(name: String = "") {
+    cdm.seedAllData()
+    if username == "" {
+      userModel.addUser(name: name)
+    } else {
+      userModel.addUser(name: username)
+    }
+//    getUserData()
+  }
+
+  func setUsername(name: String) {
+    username = name
   }
 
   func getUserData() {
@@ -31,12 +46,6 @@ class UserManager: ObservableObject {
       return false
     }
     return true
-  }
-
-  func addNewUser(username: String) {
-    cdm.seedAllData()
-    userModel.addUser(name: username)
-    print("new user successfully added: \(username)")
   }
 }
 
