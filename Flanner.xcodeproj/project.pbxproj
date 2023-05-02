@@ -111,12 +111,11 @@
 		2D21D2AB29EFB3C6001B7416 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0A45E2392A011BB8003E93BA /* PlanBridgeView.swift */,
 				2D90E86529FEA966002868B1 /* MainView.swift */,
 				2D90D31A29FBCFD000108975 /* ContentView.swift */,
 				2DA9376029F0316E0057DD82 /* HomeView.swift */,
+				2D438CB72A014248006024E3 /* Plan */,
 				2D90E86D29FEACD5002868B1 /* Onboarding */,
-				1B8705C329FD3EF0001CD1E2 /* ThisOrThatView.swift */,
 				2D56DA7329EE913F00002EE4 /* Components */,
 			);
 			path = View;
@@ -142,6 +141,14 @@
 				2D750C2A29FA5907004C2389 /* CategoryModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2D438CB72A014248006024E3 /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				0A45E2392A011BB8003E93BA /* PlanBridgeView.swift */,
+			);
+			path = Plan;
 			sourceTree = "<group>";
 		};
 		2D56DA7329EE913F00002EE4 /* Components */ = {
@@ -238,6 +245,7 @@
 			children = (
 				1B8705C229FD3EF0001CD1E2 /* OnboardingView.swift */,
 				2D750C2829FA58EC004C2389 /* PreferencesView.swift */,
+				1B8705C329FD3EF0001CD1E2 /* ThisOrThatView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";

@@ -27,23 +27,23 @@ struct ContentView: View {
 
         Spacer()
           .fullScreenCover(isPresented: $isPlanning) {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: -2) {
               HStack {
                 Button {
                   isPlanning.toggle()
                 } label: {
-                  Image(systemName: "xmark").font(.system(size: 24, weight: .semibold)).foregroundColor(.black)
+                  Image(systemName: "xmark").font(.system(size: 24, weight: .semibold)).foregroundColor(.white)
                 }
               }.padding(.horizontal).padding(.vertical, 4)
-              PreferencesView(categoryManager: CategoryManager())
-            }
+              PlandBridgeView()
+            }.background(Colors.turq)
           }
 
         // MARK: OTHER VIEWS
 
         switch selectedIndex {
         case 0: HomeView(um: UserManager())
-        case 2: OnboardingView(um: UserManager())
+        case 2: Text("Coming Soon")
         default:
           Text("Page not Found!")
         }

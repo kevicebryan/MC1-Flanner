@@ -21,7 +21,7 @@ struct PreferencesView: View {
     VStack {
       VStack {
         Text("Before we start 😁").font(.title).fontWeight(.bold)
-        Text("Please choose your preferences that relate with you and your family.").font(.footnote).multilineTextAlignment(.center).foregroundColor(Colors.turq)
+        Text("Choose your preferences that relate with\nyou and your family.").font(.footnote).multilineTextAlignment(.center).foregroundColor(Colors.turq)
         HStack {
           Spacer()
           Text("\(categoryManager.selectedCategory) / 5").font(.caption)

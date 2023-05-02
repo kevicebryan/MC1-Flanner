@@ -22,24 +22,24 @@ struct OnboardingView: View {
           ZStack {
             Ellipse()
               .foregroundColor(Colors.cream)
-            Image("onBoarding").resizable()
+            Prompt.onBoardingImage.resizable()
               .frame(width: Size.screenWidth/1.5, height: Size.screenWidth/1.5)
               .offset(y: Size.screenHeight/4)
           }.frame(width: Size.screenWidth * 1.6, height: Size.screenHeight)
-          Text("Welcome to Your Flanner!")
+          Text("Welcome to Flanner!")
             .font(.system(size: 26))
             .bold()
             .foregroundColor(Colors.creamTint)
-            .padding()
+            .padding().padding(.top, 20)
 
           Text("Let's create fun and quality events together with Flanner!")
             .frame(width: Size.screenWidth/1.2)
             .multilineTextAlignment(.center)
             .fixedSize()
             .foregroundColor(Colors.creamTint)
-            .padding()
+            .padding().padding(.top, -28).opacity(0.7)
 
-          Text("Username").foregroundColor(Colors.creamTint).fontWeight(.semibold).padding(.bottom, -2)
+          Text("Insert your full name").foregroundColor(Colors.creamTint).fontWeight(.semibold).padding(.bottom, -8)
           TextField(
             "",
             text: $username
@@ -47,7 +47,7 @@ struct OnboardingView: View {
           .multilineTextAlignment(.center)
           .textFieldStyle(.roundedBorder)
           .cornerRadius(15)
-          .frame(width: Size.screenWidth/1.3)
+          .frame(width: Size.screenWidth/1.3, height: 48)
 
           NavigationLink(destination: PreferencesView(categoryManager: CategoryManager())) {
             CustomButton(label: "Continue")
