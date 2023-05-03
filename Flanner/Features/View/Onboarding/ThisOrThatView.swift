@@ -29,7 +29,7 @@ struct ThisOrThatView: View {
         Text("GOAL & FOCUS 🎯")
           .foregroundColor(Colors.turq)
           .font(.system(size: 12, weight: .bold))
-        ProgressBar(index: $index)
+        ProgressBar(index: $index, max: 5)
 //                    .frame(alignment: .top)
         Spacer()
         Text("\(Prompt.thisOrThatPrompts[index])")
