@@ -11,8 +11,8 @@ import SwiftUI
 struct FlannerApp: App {
   var body: some Scene {
     WindowGroup {
-//      MainView()
-      AdminView(am: AdminManager())
+      MainView()
+//      AdminView(am: AdminManager())
     }
   }
 }

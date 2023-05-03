@@ -10,8 +10,7 @@ import SwiftUI
 // MARK: Function to Update Corresponding Tag
 
 private func updateThisThatTag(index: Int, selectedThisThat: Int) {
-  UserModel().updateUserTag(tagName:
-    Prompt.thisOrthatTags[index][selectedThisThat], like: true)
+  TagModel().updateTagWeight(tagName: Prompt.thisOrthatTags[index][selectedThisThat], like: true)
 }
 
 struct ThisOrThatView: View {

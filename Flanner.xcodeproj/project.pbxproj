@@ -29,6 +29,7 @@
 		2D750C2929FA58EC004C2389 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D750C2829FA58EC004C2389 /* PreferencesView.swift */; };
 		2D750C2B29FA5907004C2389 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D750C2A29FA5907004C2389 /* CategoryModel.swift */; };
 		2D750C2F29FA873F004C2389 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D750C2E29FA873F004C2389 /* CategoryViewModel.swift */; };
+		2D8C85FB2A02753000339EE3 /* RecommendationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C85FA2A02753000339EE3 /* RecommendationsView.swift */; };
 		2D90D31929FBCDCC00108975 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90D31829FBCDCC00108975 /* UserViewModel.swift */; };
 		2D90D31B29FBCFD000108975 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90D31A29FBCFD000108975 /* ContentView.swift */; };
 		2D90E85429FE41DF002868B1 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85329FE41DF002868B1 /* AdminView.swift */; };
@@ -75,6 +76,7 @@
 		2D750C2829FA58EC004C2389 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		2D750C2A29FA5907004C2389 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		2D750C2E29FA873F004C2389 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		2D8C85FA2A02753000339EE3 /* RecommendationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsView.swift; sourceTree = "<group>"; };
 		2D90D31829FBCDCC00108975 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		2D90D31A29FBCFD000108975 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D90E85329FE41DF002868B1 /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				2D90E85329FE41DF002868B1 /* AdminView.swift */,
 				2D90E85529FE451A002868B1 /* AllTagsView.swift */,
 				2D90E85729FE4535002868B1 /* AllTaskView.swift */,
+				2D8C85FA2A02753000339EE3 /* RecommendationsView.swift */,
 				2D90E87C29FEBEA7002868B1 /* AllUserView.swift */,
 				2D90E85B29FE5D55002868B1 /* AdminTaskCard.swift */,
 			);
@@ -422,6 +425,7 @@
 				2DA9375829F02FD10057DD82 /* HelperFunctions.swift in Sources */,
 				0A45E23F2A0251D3003E93BA /* WishlistView.swift in Sources */,
 				1B8705C429FD3EF0001CD1E2 /* OnboardingView.swift in Sources */,
+				2D8C85FB2A02753000339EE3 /* RecommendationsView.swift in Sources */,
 				2D90E85429FE41DF002868B1 /* AdminView.swift in Sources */,
 				1B8705C929FD3FD2001CD1E2 /* ProgressBar.swift in Sources */,
 				2D90D31929FBCDCC00108975 /* UserViewModel.swift in Sources */,

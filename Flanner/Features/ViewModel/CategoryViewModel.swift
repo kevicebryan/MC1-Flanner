@@ -19,7 +19,7 @@ class CategoryManager: ObservableObject {
       Category(name: "Travel", symbol: "airplane", tagName: "Travel"),
       Category(name: "Movie", symbol: "popcorn.fill", tagName: "Movie"),
       Category(name: "Art", symbol: "paintbrush.fill", tagName: "Art"),
-      Category(name: "Gaming", symbol: "gamecontroller.fill", tagName: "Gaming"),
+      Category(name: "Gaming", symbol: "gamecontroller.fill", tagName: "Game"),
       Category(name: "Nature", symbol: "leaf.fill", tagName: "Nature"),
     ]
   }

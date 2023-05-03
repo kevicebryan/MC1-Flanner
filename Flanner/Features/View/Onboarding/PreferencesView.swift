@@ -9,7 +9,7 @@ import SwiftUI
 
 private func likeSelectedCategories(categories: [Category]) {
   for category in categories {
-    UserModel().updateUserTag(tagName: category.tagName, like: category.selected)
+    TagModel().updateTagWeight(tagName: category.tagName, like: category.selected)
   }
 }
 
