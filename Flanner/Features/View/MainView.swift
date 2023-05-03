@@ -16,6 +16,7 @@ struct MainView: View {
     } else {
       OnboardingView(um: um).onAppear {
         CoreDataManager.shared.deleteAllData()
+        CoreDataManager.shared.seedAllData()
       }
     }
   }
