@@ -16,6 +16,17 @@ struct DummyTask: Hashable, Identifiable {
   var tags: [DummyTag] = [DummyTag(), DummyTag()]
 }
 
+struct DummyRecord: Hashable, Identifiable {
+  let id = UUID()
+  var name: String = "Long Task Name"
+  var location: String = "Ada Location"
+  var image: String = "dummyImage"
+  var tags: [DummyTag] = [DummyTag(), DummyTag()]
+  var reviewed: Bool = false
+  var done: Bool = false
+  var rating: Int = 0
+}
+
 struct DummyTag: Hashable, Identifiable {
   let id = UUID()
   var name: String = "👋 Tag"
@@ -25,3 +36,5 @@ struct DummyTag: Hashable, Identifiable {
 let dummyTasks = [DummyTask(), DummyTask(), DummyTask()]
 
 let dummyTags = [DummyTag(), DummyTag(), DummyTag()]
+
+let dummyRecords = [DummyRecord(), DummyRecord(), DummyRecord()]

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0A45E23A2A011BB8003E93BA /* PlanBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A45E2392A011BB8003E93BA /* PlanBridgeView.swift */; };
+		0A45E23D2A02509C003E93BA /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A45E23C2A02509C003E93BA /* ActivitiesView.swift */; };
+		0A45E23F2A0251D3003E93BA /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A45E23E2A0251D3003E93BA /* WishlistView.swift */; };
+		0A45E2412A02620B003E93BA /* DoneActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A45E2402A02620B003E93BA /* DoneActivitiesView.swift */; };
+		0A45E2432A026520003E93BA /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A45E2422A026520003E93BA /* ReviewView.swift */; };
 		1B2CA7252A011F5E006B060C /* CategoryBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CA7242A011F5E006B060C /* CategoryBoxView.swift */; };
 		1B8705C129FD3EE3001CD1E2 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8705C029FD3EE3001CD1E2 /* Size.swift */; };
 		1B8705C429FD3EF0001CD1E2 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8705C229FD3EF0001CD1E2 /* OnboardingView.swift */; };
@@ -49,6 +53,10 @@
 
 /* Begin PBXFileReference section */
 		0A45E2392A011BB8003E93BA /* PlanBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanBridgeView.swift; sourceTree = "<group>"; };
+		0A45E23C2A02509C003E93BA /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		0A45E23E2A0251D3003E93BA /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
+		0A45E2402A02620B003E93BA /* DoneActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneActivitiesView.swift; sourceTree = "<group>"; };
+		0A45E2422A026520003E93BA /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		1B2CA7242A011F5E006B060C /* CategoryBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBoxView.swift; sourceTree = "<group>"; };
 		1B8705C029FD3EE3001CD1E2 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		1B8705C229FD3EF0001CD1E2 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -100,6 +108,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A45E23B2A025080003E93BA /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				0A45E23C2A02509C003E93BA /* ActivitiesView.swift */,
+				0A45E23E2A0251D3003E93BA /* WishlistView.swift */,
+				0A45E2402A02620B003E93BA /* DoneActivitiesView.swift */,
+				0A45E2422A026520003E93BA /* ReviewView.swift */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
 		2D09EB7E29F7F6EE0086922F /* HomeCard */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +130,7 @@
 		2D21D2AB29EFB3C6001B7416 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0A45E23B2A025080003E93BA /* Activities */,
 				2D90E86529FEA966002868B1 /* MainView.swift */,
 				2D90D31A29FBCFD000108975 /* ContentView.swift */,
 				2DA9376029F0316E0057DD82 /* HomeView.swift */,
@@ -384,10 +404,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D4014D829F049B600C3A656 /* DummyData.swift in Sources */,
+				0A45E23D2A02509C003E93BA /* ActivitiesView.swift in Sources */,
 				2D90E86229FEA773002868B1 /* CarouselCard.swift in Sources */,
 				2D0D6FF329F1486F00E439DC /* SnapCarousel.swift in Sources */,
 				2D90E87D29FEBEA7002868B1 /* AllUserView.swift in Sources */,
 				2D90E86C29FEAB81002868B1 /* CustomButton.swift in Sources */,
+				0A45E2432A026520003E93BA /* ReviewView.swift in Sources */,
 				2D750C2F29FA873F004C2389 /* CategoryViewModel.swift in Sources */,
 				2D750C2F29FA873F004C2389 /* CategoryViewModel.swift in Sources */,
 				2D90E85C29FE5D55002868B1 /* AdminTaskCard.swift in Sources */,
@@ -395,6 +417,7 @@
 				2D21D2B029EFB584001B7416 /* CoreDataManager.swift in Sources */,
 				2D27CFC529FCD0EA00B1EE67 /* SeederData.swift in Sources */,
 				2DA9375829F02FD10057DD82 /* HelperFunctions.swift in Sources */,
+				0A45E23F2A0251D3003E93BA /* WishlistView.swift in Sources */,
 				1B8705C429FD3EF0001CD1E2 /* OnboardingView.swift in Sources */,
 				2D90E85429FE41DF002868B1 /* AdminView.swift in Sources */,
 				1B8705C929FD3FD2001CD1E2 /* ProgressBar.swift in Sources */,
@@ -406,6 +429,7 @@
 				0A45E23A2A011BB8003E93BA /* PlanBridgeView.swift in Sources */,
 				2DA9376729F033720057DD82 /* TaskListViewModel.swift in Sources */,
 				2D09EB8029F7F6FB0086922F /* HomeCardView.swift in Sources */,
+				0A45E2412A02620B003E93BA /* DoneActivitiesView.swift in Sources */,
 				2D613FFE29ED7A4D0067B81E /* Prompts.swift in Sources */,
 				1B2CA7252A011F5E006B060C /* CategoryBoxView.swift in Sources */,
 				2D90E88529FEC676002868B1 /* TagViewModel.swift in Sources */,
