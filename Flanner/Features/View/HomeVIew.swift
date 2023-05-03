@@ -10,10 +10,12 @@ import SwiftUI
 struct HomeView: View {
   @State var currIdx: Int = 0
   @ObservedObject var um: UserManager
+  var recommendations: [TaskViewModel]
   // total 6 recommendation --> 3 untuk carousel, 3 untuk card
 
   init(um: UserManager) {
     self.um = um
+    self.recommendations = TaskListViewModel().recommendations
     um.getUserData()
   }
 

@@ -27,7 +27,7 @@ class UserManager: ObservableObject {
     } else {
       userModel.addUser(name: username)
     }
-//    getUserData()
+    TaskListViewModel().getRecommendations()
   }
 
   func setUsername(name: String) {

@@ -13,6 +13,7 @@ class TagModel: ObservableObject {
 
   func getAllTags() -> [Tag] {
     let req: NSFetchRequest<Tag> = Tag.fetchRequest()
+    
     do {
       return try cdm.viewContext.fetch(req)
     } catch {
