@@ -17,8 +17,22 @@ struct RecommendationsView: View {
       Text("Get Recommenations")
     }
 
-    ForEach(tlvm.recommendations, id: \.self.id) { task in
-      AdminTaskCard(task: task)
+    VStack {
+      ScrollView {
+        ForEach(tlvm.recommendations, id: \.self.id) { task in
+          AdminTaskCard(task: task)
+        }
+        Spacer()
+        Text("For Carousel:")
+        ForEach(tlvm.carouselRecs, id: \.self.id) { task in
+          AdminTaskCard(task: task)
+        }
+        Spacer()
+        Text("For Card:")
+        ForEach(tlvm.cardRecs, id: \.self.id) { task in
+          AdminTaskCard(task: task)
+        }
+      }
     }
   }
 }

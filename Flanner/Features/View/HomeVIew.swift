@@ -10,27 +10,26 @@ import SwiftUI
 struct HomeView: View {
   @State var currIdx: Int = 0
   @ObservedObject var um: UserManager
-//  @StateObject var tlvm = TaskListViewModel()
-//  var recommendations: [TaskViewModel]
-  // total 6 recommendation --> 3 untuk carousel, 3 untuk card
+  let tlvm = TaskListViewModel()
 
   init(um: UserManager) {
     self.um = um
-//    tlvm.getRecommendations()
-//    recommendations = tlvm.recommendations
     um.getUserData()
-//    print(recommendations)
   }
 
   var body: some View {
     NavigationView {
+//      ForEach(tlvm.recommendations, id: \.self.id) { task in
+//        AdminTaskCard(task: task)
+//      }
+
       VStack {
         HStack(spacing: 0) {
           Text("Welcome \(um.currUser?.username ?? "") 👋").font(.title2).fontWeight(.bold)
           Spacer()
         }.padding(.horizontal, 32).padding(.top, 16)
 
-        SnapCarousel(index: $currIdx, items: dummyTasks) {
+        SnapCarousel(index: $currIdx, items: tlvm.carouselRecs) {
           task in
           GeometryReader {
             _ in
@@ -46,9 +45,10 @@ struct HomeView: View {
 
         ScrollView(showsIndicators: false) {
           VStack(spacing: 0) {
-            HomeCardView()
-            HomeCardView()
-            HomeCardView()
+            ForEach(tlvm.cardRecs) { cardRec in
+              HomeCardView(task: cardRec)
+            }
+
           }.padding(.horizontal)
         }.frame(maxWidth: .infinity, maxHeight: 480)
       }

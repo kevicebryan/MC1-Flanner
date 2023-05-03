@@ -61,7 +61,7 @@ class TagModel: ObservableObject {
     let tags = getAllTags()
     if tags.isEmpty {
       for tagSeed in tagSeeds {
-        addTag(name: tagSeed.name, color: tagSeed.color)
+        addTag(name: tagSeed.name, color: tagSeed.color, emoji: tagSeed.emoji)
       }
       print("SEEDED All Tags")
     } else {
@@ -69,10 +69,11 @@ class TagModel: ObservableObject {
     }
   }
 
-  func addTag(name: String, color: String, weight: Int = 2) {
+  func addTag(name: String, color: String, emoji: String, weight: Int = 2) {
     let tagEntry = NSEntityDescription.insertNewObject(forEntityName: "Tag", into: cdm.viewContext)
     tagEntry.setValue(UUID(), forKey: "id")
     tagEntry.setValue(Int32(2), forKey: "weight")
+    tagEntry.setValue(emoji, forKey: "emoji")
     tagEntry.setValue(name, forKey: "name")
     tagEntry.setValue(color, forKey: "color")
     cdm.save()

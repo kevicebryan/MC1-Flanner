@@ -15,6 +15,9 @@ class TaskListViewModel: ObservableObject {
 
   var recommendations: [TaskViewModel] = [] // MARK: Hanya sampe 6
 
+  var carouselRecs: [TaskViewModel] = []
+  var cardRecs: [TaskViewModel] = []
+
   init() {
     getAllTask()
     if !UserManager().users.isEmpty {
@@ -65,6 +68,7 @@ class TaskListViewModel: ObservableObject {
       if corrTag >= 1 {
         calonRecs.append(CalonRecommendation(task: task, tagCount: corrTag))
       }
+      corrTag = 0
     }
 
     print("\nCALON RECS:\n \(calonRecs)")
@@ -83,16 +87,22 @@ class TaskListViewModel: ObservableObject {
     for (idx, cr) in calonRecs.enumerated() {
       recommendations.append(cr.task)
 
+      if idx < 3 {
+        carouselRecs.append(cr.task)
+      } else {
+        cardRecs.append(cr.task)
+      }
+
       if idx == 5 {
         break
       }
     }
 
-    print("\nFINAL RECS:\n \(recommendations)")
+    print("\nFINAL RECS:\n \(recommendations.count)")
   }
 }
 
-struct TaskViewModel {
+struct TaskViewModel: Identifiable {
   let task: Task
 
   var id: NSManagedObjectID {

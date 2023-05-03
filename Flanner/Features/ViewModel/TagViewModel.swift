@@ -22,7 +22,7 @@ class TagListViewModel: ObservableObject {
   }
 }
 
-struct TagViewModel {
+struct TagViewModel: Identifiable {
   let tag: Tag
 
   var id: NSManagedObjectID {
@@ -42,6 +42,6 @@ struct TagViewModel {
   }
 
   var weight: Int {
-    return Int(tag.weight) ?? -1
+    return Int(tag.weight)
   }
 }

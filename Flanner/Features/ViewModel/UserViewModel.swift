@@ -38,6 +38,7 @@ class UserManager: ObservableObject {
     users = userModel.getAllUsers().map(UserViewModel.init)
     if !users.isEmpty {
       currUser = users[0]
+//      TaskListViewModel().getRecommendations()
     }
   }
 
@@ -49,7 +50,7 @@ class UserManager: ObservableObject {
   }
 }
 
-struct UserViewModel {
+struct UserViewModel: Identifiable {
   var user: User
 
   init(user: User) {
