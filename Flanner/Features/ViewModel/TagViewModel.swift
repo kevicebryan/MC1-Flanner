@@ -37,6 +37,10 @@ struct TagViewModel {
     return tag.color ?? "d9d9d9"
   }
 
+  var emoji: String {
+    return tag.emoji ?? "﹒"
+  }
+
   var weight: Int {
     return Int(tag.weight) ?? -1
   }
