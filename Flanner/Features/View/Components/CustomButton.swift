@@ -23,7 +23,7 @@ struct CustomButton: View {
       .foregroundColor(Colors.creamTint)
       .frame(width: CGFloat(width), height: 48, alignment: .center)
       .background(isDisabled ? Colors.yellowTint : Colors.yellow)
-      .cornerRadius(20, antialiased: true)
+      .cornerRadius(16, antialiased: true)
       .padding()
       .animation(.easeInOut, value: isDisabled)
   }

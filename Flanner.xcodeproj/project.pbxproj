@@ -18,6 +18,7 @@
 		1B8705C529FD3EF0001CD1E2 /* ThisOrThatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8705C329FD3EF0001CD1E2 /* ThisOrThatView.swift */; };
 		1B8705C929FD3FD2001CD1E2 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8705C829FD3FD2001CD1E2 /* ProgressBar.swift */; };
 		1BA4CEF42A024A0B0073FB58 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4CEF32A024A0B0073FB58 /* TaskView.swift */; };
+		1BA4CEF82A02783A0073FB58 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4CEF72A02783A0073FB58 /* PlanView.swift */; };
 		2D09EB8029F7F6FB0086922F /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09EB7F29F7F6FB0086922F /* HomeCardView.swift */; };
 		2D0D6FF329F1486F00E439DC /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D6FF229F1486F00E439DC /* SnapCarousel.swift */; };
 		2D21D2B029EFB584001B7416 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D21D2AF29EFB584001B7416 /* CoreDataManager.swift */; };
@@ -65,6 +66,7 @@
 		1B8705C329FD3EF0001CD1E2 /* ThisOrThatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThisOrThatView.swift; sourceTree = "<group>"; };
 		1B8705C829FD3FD2001CD1E2 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		1BA4CEF32A024A0B0073FB58 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		1BA4CEF72A02783A0073FB58 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
 		2D09EB7F29F7F6FB0086922F /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		2D0D6FF229F1486F00E439DC /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
 		2D21D2AF29EFB584001B7416 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				0A45E2392A011BB8003E93BA /* PlanBridgeView.swift */,
+				1BA4CEF72A02783A0073FB58 /* PlanView.swift */,
 			);
 			path = Plan;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				2D90E85C29FE5D55002868B1 /* AdminTaskCard.swift in Sources */,
 				2D90E85829FE4535002868B1 /* AllTaskView.swift in Sources */,
 				2D21D2B029EFB584001B7416 /* CoreDataManager.swift in Sources */,
+				1BA4CEF82A02783A0073FB58 /* PlanView.swift in Sources */,
 				2D27CFC529FCD0EA00B1EE67 /* SeederData.swift in Sources */,
 				2DA9375829F02FD10057DD82 /* HelperFunctions.swift in Sources */,
 				0A45E23F2A0251D3003E93BA /* WishlistView.swift in Sources */,
