@@ -15,14 +15,13 @@ struct ReviewView: View {
             VStack {
                 Spacer()
                 ZStack {
-                  Color.red
-                  Image(record.image)
+                    Image(record.image)
                         .resizable()
                         .scaledToFill()
 
                   VStack(spacing: 0) {
                     Spacer()
-                    LinearGradient(colors: [.black.opacity(0.85), .black.opacity(0.75), .black.opacity(0.2), .white.opacity(0)], startPoint: .bottom, endPoint: .top).frame(height: 80)
+                    LinearGradient(colors: [.black.opacity(0.85), .black.opacity(0.75), .black.opacity(0.2), .white.opacity(0)], startPoint: .bottomLeading, endPoint: .topLeading).frame(height: 100)
                   }
 
                   VStack(alignment: .leading) {
@@ -31,21 +30,22 @@ struct ReviewView: View {
                           .foregroundColor(Colors.creamTint)
                           .fontWeight(.semibold)
                           .font(.system(size: 20))
-                          .padding()
-                  }.padding(.bottom, 10)
-                        .multilineTextAlignment(.center)
+                          .padding(.bottom, 10)
+                  }
+                  .padding(.bottom, 10)
+                  .multilineTextAlignment(.center)
                 }.frame(width: 345, height: 222)
-                    .cornerRadius(12)
+                    .cornerRadius(20)
+                Spacer()
                 
                 Text("Let’s rate your activity!")
                     .fontWeight(.bold)
                     .font(.system(size: 20))
+                    .padding(.bottom, 5)
                 Text("How was your quality time experience?")
                     .fontWeight(.regular)
                     .font(.system(size: 15))
-                
-                Spacer()
-                
+    
                 HStack {
                     VStack {
                         Button(action: {
@@ -61,10 +61,11 @@ struct ReviewView: View {
                                 }
                         Text("Dissapointed")
                     }
+                    
                     VStack {
                         Button(action: {
                             print("S")
-//                            record.rating = 0
+//                            record.rating = 1
                                     }) {
                                     Text("😐")
                                             .font(.system(size: 55))
@@ -78,7 +79,7 @@ struct ReviewView: View {
                     VStack {
                         Button(action: {
                             print("S")
-//                            record.rating = 0
+//                            record.rating = 2
                                     }) {
                                     Text("🥰")
                                             .font(.system(size: 55))
@@ -90,6 +91,7 @@ struct ReviewView: View {
                         Text("Enjoy")
                     }
                 }
+                Spacer()
                 
                 NavigationLink(destination: ActivitiesView()
                 ) { CustomButton(label: "Submit", width: 280)
