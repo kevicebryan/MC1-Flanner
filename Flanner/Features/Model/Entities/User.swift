@@ -48,20 +48,5 @@ class UserModel: ObservableObject {
     }
   }
 
-  func updateUserTag(tagName: String, like: Bool = false, dislike: Bool = false) {
-    guard let tag = TagModel().getTagByName(name: tagName)
-    else {
-      return
-    }
-    if like {
-      tag.weight = 3
-    }
-    if dislike {
-      tag.weight = 1
-    }
-    if !like && !dislike {
-      tag.weight = 2
-    }
-    cdm.save()
-  }
+
 }

@@ -10,8 +10,7 @@ import SwiftUI
 // MARK: Function to Update Corresponding Tag
 
 private func updateThisThatTag(index: Int, selectedThisThat: Int) {
-  UserModel().updateUserTag(tagName:
-    Prompt.thisOrthatTags[index][selectedThisThat], like: true)
+  TagModel().updateTagWeight(tagName: Prompt.thisOrthatTags[index][selectedThisThat], like: true)
 }
 
 struct ThisOrThatView: View {
@@ -29,7 +28,7 @@ struct ThisOrThatView: View {
         Text("GOAL & FOCUS 🎯")
           .foregroundColor(Colors.turq)
           .font(.system(size: 12, weight: .bold))
-        ProgressBar(index: $index)
+        ProgressBar(index: $index, max: 5)
 //                    .frame(alignment: .top)
         Spacer()
         Text("\(Prompt.thisOrThatPrompts[index])")

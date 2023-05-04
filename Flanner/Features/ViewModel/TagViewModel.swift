@@ -22,7 +22,7 @@ class TagListViewModel: ObservableObject {
   }
 }
 
-struct TagViewModel {
+struct TagViewModel: Identifiable {
   let tag: Tag
 
   var id: NSManagedObjectID {
@@ -37,7 +37,11 @@ struct TagViewModel {
     return tag.color ?? "d9d9d9"
   }
 
+  var emoji: String {
+    return tag.emoji ?? "﹒"
+  }
+
   var weight: Int {
-    return Int(tag.weight) ?? -1
+    return Int(tag.weight)
   }
 }

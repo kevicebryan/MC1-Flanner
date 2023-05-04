@@ -59,7 +59,6 @@ struct OnboardingView: View {
             ).navigationBarBackButtonHidden(true)) {
               CustomButton(label: "Continue")
             }.simultaneousGesture(TapGesture().onEnded {
-//              um.addNewUser(name: username)
               um.setUsername(name: username)
               print("UM.Username:  \(um.username)")
             })

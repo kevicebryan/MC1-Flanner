@@ -47,7 +47,14 @@ struct AdminView: View {
           NavigationLink(destination: AllUserView(am: am)) {
             Text("View Users")
           }
+
         }.padding(.horizontal, 16)
+
+        if !am.users.isEmpty {
+          NavigationLink(destination: RecommendationsView()) {
+            Text("Go to Recommendations").foregroundColor(.purple).padding(.top, 32)
+          }
+        }
         Spacer()
       }.padding(.top, 100)
     }
