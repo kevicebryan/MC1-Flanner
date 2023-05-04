@@ -46,7 +46,7 @@ struct ContentView: View {
 
         switch selectedIndex {
         case 0: HomeView(um: UserManager())
-        case 2: Text("Coming Soon")
+        case 2: ActivitiesView()
         default:
           Text("Page not Found!")
         }
