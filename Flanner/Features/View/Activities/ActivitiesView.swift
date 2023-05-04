@@ -12,6 +12,12 @@ struct ActivitiesView: View {
     
     var body: some View {
             VStack {
+                Text("Our Activities")
+                        .fontWeight(.bold)
+                        .foregroundColor(Colors.turq)
+                        .font(.system(size: 22))
+                        .padding(.top, 15)
+                
                 Picker("Select", selection: $index) {
                     Text("Whislist").tag(0)
                     Text("Done").tag(1)
