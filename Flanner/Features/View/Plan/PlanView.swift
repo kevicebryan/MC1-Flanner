@@ -15,6 +15,7 @@ struct PlanView: View {
   @State var plans: [TaskViewModel] = []
   
   @State var index: Int = 0
+  @State var barIndex: Int = 0
   @State var isPopup = false
   
   var body: some View {
@@ -37,7 +38,7 @@ struct PlanView: View {
             .foregroundColor(Colors.turq)
             .font(.system(size: 12, weight: .bold))
             .padding(EdgeInsets(top: 15, leading: 10, bottom: 0, trailing: 10))
-          ProgressBar(index: $index, max: 3)
+          ProgressBar(index: $barIndex, max: 3)
             
           Spacer()
             
@@ -46,7 +47,7 @@ struct PlanView: View {
           Rectangle()
             .fill(Colors.turq)
             .cornerRadius(16)
-            .frame(width: 354, height: (index == 2) ? 434 : 281)
+            .frame(width: 354, height: (index == 2 || index == 3) ? 434 : 281)
             .overlay(
               VStack {
                 Circle()
@@ -59,7 +60,6 @@ struct PlanView: View {
                     )
                   )
                   .frame(width: 103, height: 103)
-                //                            .offset(y:-52)
                   
                 Text("\(Prompt.planPrompts[index])")
                   .font(.system(size: 18, weight: .bold))
@@ -87,10 +87,15 @@ struct PlanView: View {
                       print("added \(selectedTag?.name ?? "NOTHING") to selectedTags")
                     }
                     
-                    if index != 2 {
-                      index += 1
-                    }
-                    else {
+                    if index < 2 {
+                      if Prompt.planChoices[index][i] == "I feel energized!" {
+                        index += 2
+                      
+                      } else {
+                        index += 1
+                      }
+                      barIndex += 1
+                    } else {
                       isPopup.toggle()
                     }
                     

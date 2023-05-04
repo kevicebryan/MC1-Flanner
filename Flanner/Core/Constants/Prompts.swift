@@ -29,8 +29,11 @@ extension Prompt {
                                ["Nature", "Indoor"],
                                ["Sport", "Relaxing"]]
 
+  // MARK: Plan Prompts
+
   static let planPrompts = ["Which place do you prefer today?",
                             "What do you feel like doing today?",
+                            "Please choose your preference",
                             "Please choose your preference"]
 
   static let planChoices = [
@@ -42,7 +45,7 @@ extension Prompt {
 
   static let planTags = [
     ["Indoor", "Outdoor"],
-    ["", ""],
+    ["Relax", "Adrenaline"],
     ["Music", "Movie", "Art", "Nature", "Food"],
     ["Sport", "Music", "Nature", "Travel", "Game"],
   ]
