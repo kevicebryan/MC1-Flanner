@@ -25,7 +25,7 @@ struct DoneActivitiesView: View {
                 Text(record.name).opacity(0.6).fontWeight(.light)
                       .font(.caption2)
                       .lineLimit(3, reservesSpace: true)
-                  NavigationLink(destination: ReviewView()
+                  NavigationLink(destination: ReviewView(record: dummyRecords[0])
                   ) { HStack {
                       Text("Review")
                           .foregroundColor(Colors.turq)
