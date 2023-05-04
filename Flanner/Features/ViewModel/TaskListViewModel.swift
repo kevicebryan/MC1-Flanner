@@ -18,6 +18,9 @@ class TaskListViewModel: ObservableObject {
   var carouselRecs: [TaskViewModel] = []
   var cardRecs: [TaskViewModel] = []
 
+  var doneTasks: [TaskViewModel] = []
+  var plannedTasks: [TaskViewModel] = []
+
   init() {
     getAllTask()
     if !UserManager().users.isEmpty {
@@ -25,8 +28,53 @@ class TaskListViewModel: ObservableObject {
     }
   }
 
+  func refreshAllTask() {
+    getAllTask()
+    getRecommendations()
+  }
+
   func getAllTask() {
     tasks = taskModel.getAllTasks().map(TaskViewModel.init)
+
+    plannedTasks = tasks.filter {
+      $0.planned == true
+    }
+
+    doneTasks = tasks.filter {
+      $0.done == true
+    }
+  }
+
+  func rateTask(task: TaskViewModel, rating: Int = 2) {
+    for taskTag in task.tags {
+      if rating == 1 {
+        taskTag.weight = 1
+      }
+      if rating == 2 {
+        taskTag.weight = 2
+      }
+      if rating == 3 {
+        taskTag.weight = 3
+      }
+      print("RATED \(taskTag.name ?? "ERR") : \(taskTag.weight)")
+      task.task.reviewed = true
+    }
+  }
+
+  func planTask(task: TaskViewModel, plan: Bool = true) {
+    if plan == true {
+      task.task.planned = true
+    } else {
+      task.task.planned = false
+    }
+  }
+
+  func doneTask(task: TaskViewModel, done: Bool = true) {
+    if done == true {
+      task.task.done = true
+    } else {
+      task.task.done = false
+    }
   }
 
   func getRecommendations() {
@@ -123,6 +171,27 @@ struct TaskViewModel: Identifiable {
 
   var location: String {
     return task.location ?? ""
+  }
+
+  var reviewed: Bool {
+    if task.reviewed == nil || task.reviewed == false {
+      return false
+    }
+    return true
+  }
+
+  var done: Bool {
+    if task.done == nil || task.done == false {
+      return false
+    }
+    return true
+  }
+
+  var planned: Bool {
+    if task.planned == nil || task.planned == false {
+      return false
+    }
+    return true
   }
 
   var tags: [Tag] {
