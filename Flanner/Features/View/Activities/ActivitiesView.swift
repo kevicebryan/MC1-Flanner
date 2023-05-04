@@ -11,8 +11,13 @@ struct ActivitiesView: View {
     @State private var index = 0
     
     var body: some View {
-        NavigationView{
             VStack {
+                Text("Our Activities")
+                        .fontWeight(.bold)
+                        .foregroundColor(Colors.turq)
+                        .font(.system(size: 22))
+                        .padding(.top, 15)
+                
                 Picker("Select", selection: $index) {
                     Text("Whislist").tag(0)
                     Text("Done").tag(1)
@@ -26,12 +31,11 @@ struct ActivitiesView: View {
                     
                 } else {
                     DoneActivitiesView(record: dummyRecords[0])
-                    }
+                }
                 Spacer()
             }
         }
     }
-}
 
 struct ActivitiesView_Previews: PreviewProvider {
     static var previews: some View {
