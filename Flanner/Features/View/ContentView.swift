@@ -37,7 +37,7 @@ struct ContentView: View {
                     Image(systemName: "xmark").font(.system(size: 24, weight: .semibold)).foregroundColor(Colors.lBlueTint)
                   }
                 }.padding(.horizontal).padding(.vertical, 4)
-                PlandBridgeView()
+                PlandBridgeView(showPlanBridge: $isPlanning)
               }.background(Colors.turq)
             }
           }

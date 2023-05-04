@@ -61,6 +61,54 @@ class TaskListViewModel: ObservableObject {
     }
   }
 
+  func getPlanResult(selectedTags: [TagViewModel]) -> [TaskViewModel] {
+    // MARK: penampung calon task yang akan ada di rekomendasi
+
+    struct CalonPlan {
+      let task: TaskViewModel
+      let tagCount: Int
+    }
+
+    var calonPlans: [CalonPlan] = []
+
+    // MARK: jika tasknya punya at least 1 tag yang cocok append ke calon rekomendasi
+
+    for task in tasks {
+      var corrTag = 0
+      for taskTag in task.tags {
+        for selectedTag in selectedTags {
+          if selectedTag.name == taskTag.name {
+            corrTag += 1
+          }
+        }
+      }
+      if corrTag >= 2 {
+        calonPlans.append(CalonPlan(task: task, tagCount: corrTag))
+      }
+      corrTag = 0
+    }
+
+    print("\nCALON PLANS:\n \(calonPlans)")
+
+    // MARK: sort calon rekomendasi berdasarkan tagCount, yang paling banyak paling pertama
+
+    calonPlans.sort { $0.tagCount > $1.tagCount }
+
+    // MARK: kita kosongin dlu recommendation biar dia fresh
+
+    var plans: [TaskViewModel] = []
+
+    // MARK: ambil 6 task yang paling pertama masukin ke recommendation
+
+    for (idx, cp) in calonPlans.enumerated() {
+      plans.append(cp.task)
+      if idx == 3 {
+        break
+      }
+    }
+    return plans
+  }
+
   func planTask(task: TaskViewModel, plan: Bool = true) {
     if plan == true {
       task.task.planned = true
