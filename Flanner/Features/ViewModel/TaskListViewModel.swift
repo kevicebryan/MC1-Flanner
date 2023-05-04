@@ -7,6 +7,7 @@
 
 import CoreData
 import Foundation
+import SwiftUI
 
 class TaskListViewModel: ObservableObject {
   let taskModel = TaskModel()
@@ -210,15 +211,28 @@ struct TaskViewModel: Identifiable {
   }
 
   var image: String {
-    return task.image ?? "defaultTaskImage"
+    if task.image == "" || task.image == " " || (task.image == nil) {
+      return "dummyImage"
+    }
+
+    let imageExists: Bool = UIImage(named: task.image ?? "") != nil
+    if !imageExists { return "dummyImage" }
+
+    return task.image ?? "dummyImage"
   }
 
   var detail: String {
-    return task.detail ?? "There ar currently no details"
+    if task.detail == "" || task.detail == " " || (task.detail == nil) {
+      return "There ar currently no details..."
+    }
+    return task.detail ?? "There ar currently no details..."
   }
 
   var location: String {
-    return task.location ?? ""
+    if task.location == "" || task.location == " " || (task.location == nil) {
+      return ""
+    }
+    return task.image ?? ""
   }
 
   var reviewed: Bool {

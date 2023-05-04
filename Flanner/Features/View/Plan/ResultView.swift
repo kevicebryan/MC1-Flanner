@@ -25,6 +25,14 @@ struct ResultView: View {
       VStack {
         ZStack {
           Image(plans[currIdx].image)
+
+          VStack {
+            Spacer()
+            Rectangle().foregroundColor(.white)
+              .frame(width: .infinity, height: 300)
+              .edgesIgnoringSafeArea(.all)
+          }
+
           VStack(spacing: 0) {
             Color.black.opacity(0.6)
               .frame(height: 90, alignment: .top).padding(0)
@@ -41,7 +49,8 @@ struct ResultView: View {
         Spacer()
         Rectangle()
           .foregroundColor(.white)
-          .cornerRadius(40).overlay(
+          .cornerRadius(40)
+          .overlay(
             VStack(alignment: .leading, spacing: 10) {
               Text(plans[currIdx].name)
                 .font(.system(size: 24, weight: .bold))
@@ -52,7 +61,7 @@ struct ResultView: View {
                     .padding(6)
                     .overlay(
                       RoundedRectangle(cornerRadius: 4)
-                        .stroke(.blue, lineWidth: 1.5)
+                        .stroke(Color(hex: tag.color ?? "d9d9d9"), lineWidth: 1.5)
                     )
                 }
               }
@@ -101,7 +110,11 @@ struct ResultView: View {
                   CustomButton(label: "Wishlist", width: 250)
                 }
                 Spacer()
-              }.frame(height: 32).padding(.top, 12).padding(.bottom, -20)
+              }
+              .frame(height: 32)
+              .padding(.top, 12)
+              .padding(.bottom, -20)
+              .background(.white)
             }
             .padding(EdgeInsets(top: 30, leading: 25, bottom: 30, trailing: 25))
           )
