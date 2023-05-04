@@ -52,7 +52,6 @@ struct ReviewView: View {
                 HStack {
                     VStack {
                         Button(action: {
-                            print("S")
                             record.rating = 0
                             button2Opacity = 0.4
                             button3Opacity = 0.4
@@ -70,7 +69,6 @@ struct ReviewView: View {
                     
                     VStack {
                         Button(action: {
-                            print("S")
                             record.rating = 1
                             button1Opacity = 0.4
                             button3Opacity = 0.4
@@ -89,7 +87,6 @@ struct ReviewView: View {
                     
                     VStack {
                         Button(action: {
-                            print("S")
                             record.rating = 2
                             button2Opacity = 0.4
                             button1Opacity = 0.4
