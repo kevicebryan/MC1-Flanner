@@ -60,6 +60,10 @@ class TaskModel: ObservableObject {
     task.detail = detail
     task.image = img
 
+    task.reviewed = false
+    task.done = false
+    task.reviewed = false
+
     var tags: [Tag] = []
     for tagName in tagNames {
       if let currTag = TagModel().getTagByName(name: tagName) {
