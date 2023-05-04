@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ReviewView: View {
-    let record: DummyRecord
+    @State public var record: DummyRecord
+    @State private var button1Opacity = 1.0
+    @State private var button2Opacity = 1.0
+    @State private var button3Opacity = 1.0
+    @State private var isReviewed = true
     
     var body: some View {
-        NavigationView {
             VStack {
                 Spacer()
                 ZStack {
@@ -50,22 +53,28 @@ struct ReviewView: View {
                     VStack {
                         Button(action: {
                             print("S")
-//                            record.rating = 0
+                            record.rating = 0
+                            button2Opacity = 0.4
+                            button3Opacity = 0.4
+                            isReviewed = false
                                     }) {
                                     Text("🥲")
                                             .font(.system(size: 55))
                                         .frame(width: 79, height: 79)
                                         .foregroundColor(Color.black)
                                         .background(Colors.white)
-                                        .clipShape(Circle())
+                                        .clipShape(Circle())    
                                 }
                         Text("Dissapointed")
-                    }
+                    }.opacity(button1Opacity)
                     
                     VStack {
                         Button(action: {
                             print("S")
-//                            record.rating = 1
+                            record.rating = 1
+                            button1Opacity = 0.4
+                            button3Opacity = 0.4
+                            isReviewed = false
                                     }) {
                                     Text("😐")
                                             .font(.system(size: 55))
@@ -73,13 +82,18 @@ struct ReviewView: View {
                                         .foregroundColor(Color.black)
                                         .background(Colors.white)
                                         .clipShape(Circle())
+                                        
                                 }
                         Text("Neutral")
-                    }
+                    }.opacity(button2Opacity)
+                    
                     VStack {
                         Button(action: {
                             print("S")
-//                            record.rating = 2
+                            record.rating = 2
+                            button2Opacity = 0.4
+                            button1Opacity = 0.4
+                            isReviewed = false
                                     }) {
                                     Text("🥰")
                                             .font(.system(size: 55))
@@ -87,19 +101,19 @@ struct ReviewView: View {
                                         .foregroundColor(Color.black)
                                         .background(Colors.white)
                                         .clipShape(Circle())
+                                        
                                 }
                         Text("Enjoy")
-                    }
+                    }.opacity(button3Opacity)
                 }
                 Spacer()
                 
                 NavigationLink(destination: ActivitiesView()
-                ) { CustomButton(label: "Submit", width: 280)
+                ) { CustomButton(label: "Submit", width: 280, isDisabled: isReviewed)
                 }
                 .padding(.top, 20)
             }
         }
-    }
 }
 
 struct ReviewView_Previews: PreviewProvider {

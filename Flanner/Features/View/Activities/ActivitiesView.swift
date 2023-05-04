@@ -11,7 +11,6 @@ struct ActivitiesView: View {
     @State private var index = 0
     
     var body: some View {
-        NavigationView{
             VStack {
                 Picker("Select", selection: $index) {
                     Text("Whislist").tag(0)
@@ -26,12 +25,11 @@ struct ActivitiesView: View {
                     
                 } else {
                     DoneActivitiesView(record: dummyRecords[0])
-                    }
+                }
                 Spacer()
             }
         }
     }
-}
 
 struct ActivitiesView_Previews: PreviewProvider {
     static var previews: some View {
