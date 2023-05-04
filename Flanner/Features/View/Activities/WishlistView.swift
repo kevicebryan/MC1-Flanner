@@ -31,11 +31,11 @@ struct WishlistView: View {
                   .lineLimit(3, reservesSpace: true)
           }.padding(.all, 8)
                 .padding(.leading, -16)
-                .frame(width: 195)
+                .frame(width: 180)
             
             Image(systemName: isChecked ? "checkmark.square" : "square")
                 .resizable()
-                .frame(width: 22, height: 22)
+                .frame(width: 20, height: 20)
                 .foregroundColor(isChecked ? Colors.turq : Color.secondary)
                         .onTapGesture {
                             self.isChecked.toggle()
@@ -44,7 +44,7 @@ struct WishlistView: View {
             Spacer()
         }.background(.white)
             .cornerRadius(20)
-            .frame(width: 320, height: 116)
+            .frame(width: 315, height: 116)
           .shadow(color: Color.black.opacity(0.05), radius: 20, x: 0, y: 20)
     }
 }
