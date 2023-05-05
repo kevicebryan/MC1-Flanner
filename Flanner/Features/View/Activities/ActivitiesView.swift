@@ -9,17 +9,19 @@ import SwiftUI
 
 struct ActivitiesView: View {
     @State private var index = 0
+    @StateObject var tlvm = TaskListViewModel()
     
     var body: some View {
+        NavigationView {
             VStack {
                 Text("Our Activities")
-                        .fontWeight(.bold)
-                        .foregroundColor(Colors.turq)
-                        .font(.system(size: 22))
-                        .padding(.top, 15)
+                    .fontWeight(.bold)
+                    .foregroundColor(Colors.turq)
+                    .font(.system(size: 22))
+                    .padding(.top, 15)
                 
                 Picker("Select", selection: $index) {
-                    Text("Whislist").tag(0)
+                    Text("Wishlist").tag(0)
                     Text("Done").tag(1)
                 }
                 .pickerStyle(.segmented)
@@ -27,15 +29,24 @@ struct ActivitiesView: View {
                 
                 
                 if index == 0 {
-                    WishlistView(record: dummyRecords[0])
+                    ScrollView {
+                        ForEach(tlvm.plannedTasks, id: \.self.id) { task in
+                            WishlistView(record: task)
+                        }
+                    }
                     
                 } else {
-                    DoneActivitiesView(record: dummyRecords[0])
+                    ScrollView {
+                        ForEach(tlvm.doneTasks, id: \.self.id) { task in
+                            DoneActivitiesView(record: task, isReviewed: .constant(false))
+                        }
+                    }
                 }
                 Spacer()
             }
         }
     }
+}
 
 struct ActivitiesView_Previews: PreviewProvider {
     static var previews: some View {

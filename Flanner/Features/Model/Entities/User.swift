@@ -8,7 +8,7 @@
 import CoreData
 import Foundation
 
-class UserModel: ObservableObject {
+class UserCoreDataManager: ObservableObject {
   let cdm = CoreDataManager.shared
 
   func addUser(name: String) {
