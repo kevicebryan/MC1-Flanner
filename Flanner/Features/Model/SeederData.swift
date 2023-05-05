@@ -69,7 +69,7 @@ public let taskSeeds = [
            img: "petCafe", loc: "", tagNames: ["Nature", "Indoor", "Food"]),
   taskSeed(name: "Jet Ski",
            detail: "Looking for a fun and exciting way to enjoy the water with your family? Jetskiing is a thrilling water activity that offers a unique opportunity to experience the water in a new way.\nIt is a perfect way to bond with your family, enjoy the sun, and explore the beauty of the water. From racing across the waves to taking a leisurely tour of the coastline, jetskiing offers an unforgettable adventure for all ages.",
-           img: "jetSki", loc: "", tagNames: ["Outdoor", "Nature", "Adrenaline"]),
+           img: "jetski", loc: "", tagNames: ["Outdoor", "Nature", "Adrenaline"]),
   taskSeed(name: "ATV Riding",
            detail: "Looking for an adrenaline-pumping activity? Consider an ATV adventure! Riding an ATV is a great way to explore new terrain, challenge yourself, and have fun with your family.\nATV adventure offers a unique opportunity to bond with your family, test your driving skills, and enjoy the beauty of nature. From riding through mud and dirt to tackling steep hills and obstacles, ATV adventure allows you to experience a thrilling adventure with your loved ones.",
            img: "atv", loc: "", tagNames: ["Outdoor", "Adrenaline", "Nature"]),

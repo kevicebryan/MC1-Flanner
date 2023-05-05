@@ -62,7 +62,7 @@ struct ActivityDetailView: View {
                           .stroke(Color(hex: tag.color ?? "d9d9d9"), lineWidth: 1.5)
                       )
                   }
-                }
+                }.padding(.bottom, 2)
 
                 ScrollView {
                   Text(task.detail)

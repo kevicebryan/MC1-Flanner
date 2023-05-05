@@ -71,13 +71,13 @@ struct ResultView: View {
                             .stroke(Color(hex: tag.color ?? "d9d9d9"), lineWidth: 1.5)
                         )
                     }
-                  }
+                  }.padding(.bottom, 2)
 
                   ScrollView {
                     Text(plans[currIdx].detail)
                       .lineSpacing(5)
                       .font(.system(size: 14, weight: .regular))
-                  }.frame(height: 200)
+                  }.frame(height: 320)
                   Spacer()
                 }
                 .padding(EdgeInsets(top: 30, leading: 25, bottom: 30, trailing: 25))
@@ -115,7 +115,8 @@ struct ResultView: View {
           .frame(width: 50, height: 48)
           Button {
             // MARK: Make Task as Planned
-
+              isAnswering.toggle()
+              showView.toggle()
             plans[currIdx].task.planned = true
             print("SET PLANNED of  \(plans[currIdx].name) to \(plans[currIdx].planned)")
 //            dismiss()
