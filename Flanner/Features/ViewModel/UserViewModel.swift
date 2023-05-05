@@ -9,7 +9,7 @@ import CoreData
 import Foundation
 
 class UserManager: ObservableObject {
-  let userModel = UserModel()
+  let userModel = UserCoreDataManager()
   let cdm = CoreDataManager.shared
 
   @Published var users: [UserViewModel] = []

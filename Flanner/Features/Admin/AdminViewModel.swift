@@ -11,7 +11,7 @@ class AdminManager: ObservableObject {
   let cdm: CoreDataManager
   let tagM = TagModel()
   let taskM = TaskModel()
-  let userM = UserModel()
+  let userM = UserCoreDataManager()
 
   var tags: [TagViewModel]
   var tasks: [TaskViewModel]
