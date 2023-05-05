@@ -19,10 +19,6 @@ struct HomeView: View {
 
   var body: some View {
     NavigationView {
-//      ForEach(tlvm.recommendations, id: \.self.id) { task in
-//        AdminTaskCard(task: task)
-//      }
-
       VStack {
         HStack(spacing: 0) {
           Text("Welcome \(um.currUser?.username ?? "") 👋").font(.title2).fontWeight(.bold)

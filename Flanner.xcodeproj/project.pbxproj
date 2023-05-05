@@ -32,6 +32,7 @@
 		2D750C2B29FA5907004C2389 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D750C2A29FA5907004C2389 /* CategoryModel.swift */; };
 		2D750C2F29FA873F004C2389 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D750C2E29FA873F004C2389 /* CategoryViewModel.swift */; };
 		2D8C85FB2A02753000339EE3 /* RecommendationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C85FA2A02753000339EE3 /* RecommendationsView.swift */; };
+		2D8C85FD2A03FF5B00339EE3 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C85FC2A03FF5B00339EE3 /* ActivityDetailView.swift */; };
 		2D90D31929FBCDCC00108975 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90D31829FBCDCC00108975 /* UserViewModel.swift */; };
 		2D90D31B29FBCFD000108975 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90D31A29FBCFD000108975 /* ContentView.swift */; };
 		2D90E85429FE41DF002868B1 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90E85329FE41DF002868B1 /* AdminView.swift */; };
@@ -81,6 +82,7 @@
 		2D750C2A29FA5907004C2389 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		2D750C2E29FA873F004C2389 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		2D8C85FA2A02753000339EE3 /* RecommendationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsView.swift; sourceTree = "<group>"; };
+		2D8C85FC2A03FF5B00339EE3 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
 		2D90D31829FBCDCC00108975 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		2D90D31A29FBCFD000108975 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D90E85329FE41DF002868B1 /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				2D90E86529FEA966002868B1 /* MainView.swift */,
 				2D90D31A29FBCFD000108975 /* ContentView.swift */,
 				2DA9376029F0316E0057DD82 /* HomeView.swift */,
+				2D8C85FC2A03FF5B00339EE3 /* ActivityDetailView.swift */,
 				2D438CB72A014248006024E3 /* Plan */,
 				2D90E86D29FEACD5002868B1 /* Onboarding */,
 				2D56DA7329EE913F00002EE4 /* Components */,
@@ -435,6 +438,7 @@
 				1B8705C429FD3EF0001CD1E2 /* OnboardingView.swift in Sources */,
 				2D8C85FB2A02753000339EE3 /* RecommendationsView.swift in Sources */,
 				2D90E85429FE41DF002868B1 /* AdminView.swift in Sources */,
+				2D8C85FD2A03FF5B00339EE3 /* ActivityDetailView.swift in Sources */,
 				1B8705C929FD3FD2001CD1E2 /* ProgressBar.swift in Sources */,
 				2D90D31929FBCDCC00108975 /* UserViewModel.swift in Sources */,
 				2D90E87B29FEB51A002868B1 /* Tag.swift in Sources */,

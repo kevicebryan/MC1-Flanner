@@ -28,11 +28,27 @@ extension Prompt {
                                ["Adrenaline", ""],
                                ["Nature", "Indoor"],
                                ["Sport", "Relaxing"]]
-    
-    static let planPrompts = ["Which place do you prefer today?", "What do you feel like doing today?", "Please choose your preference"]
-    
-    static let planChoices = [["Indoor", "Outdoor"], ["I want to relax and chill", "I feel energized!"], ["Music", "Movie", "Art", "Nature", "Food"], ["Sport", "Music", "Nature", "Travel", "Game"]]
-    
+
+  // MARK: Plan Prompts
+
+  static let planPrompts = ["Which place do you prefer today?",
+                            "What do you feel like doing today?",
+                            "Please choose your preference",
+                            "Please choose your preference"]
+
+  static let planChoices = [
+    ["Indoor", "Outdoor"],
+    ["I want to relax and chill", "I feel energized!"],
+    ["Music", "Movie", "Art", "Nature", "Food"],
+    ["Sport", "Music", "Nature", "Travel", "Game"],
+  ]
+
+  static let planTags = [
+    ["Indoor", "Outdoor"],
+    ["Relax", "Adrenaline"],
+    ["Music", "Movie", "Art", "Nature", "Food"],
+    ["Sport", "Music", "Nature", "Travel", "Game"],
+  ]
 
   // MARK: Default Images
 

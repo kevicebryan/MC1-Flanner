@@ -7,6 +7,7 @@
 
 import CoreData
 import Foundation
+import SwiftUI
 
 class TaskListViewModel: ObservableObject {
   let taskModel = TaskModel()
@@ -59,6 +60,54 @@ class TaskListViewModel: ObservableObject {
       print("RATED \(taskTag.name ?? "ERR") : \(taskTag.weight)")
       task.task.reviewed = true
     }
+  }
+
+  func getPlanResult(selectedTags: [TagViewModel]) -> [TaskViewModel] {
+    // MARK: penampung calon task yang akan ada di rekomendasi
+
+    struct CalonPlan {
+      let task: TaskViewModel
+      let tagCount: Int
+    }
+
+    var calonPlans: [CalonPlan] = []
+
+    // MARK: jika tasknya punya at least 1 tag yang cocok append ke calon rekomendasi
+
+    for task in tasks {
+      var corrTag = 0
+      for taskTag in task.tags {
+        for selectedTag in selectedTags {
+          if selectedTag.name == taskTag.name {
+            corrTag += 1
+          }
+        }
+      }
+      if corrTag >= 2 {
+        calonPlans.append(CalonPlan(task: task, tagCount: corrTag))
+      }
+      corrTag = 0
+    }
+
+    print("\nCALON PLANS:\n \(calonPlans)")
+
+    // MARK: sort calon rekomendasi berdasarkan tagCount, yang paling banyak paling pertama
+
+    calonPlans.sort { $0.tagCount > $1.tagCount }
+
+    // MARK: kita kosongin dlu recommendation biar dia fresh
+
+    var plans: [TaskViewModel] = []
+
+    // MARK: ambil 6 task yang paling pertama masukin ke recommendation
+
+    for (idx, cp) in calonPlans.enumerated() {
+      plans.append(cp.task)
+      if idx == 3 {
+        break
+      }
+    }
+    return plans
   }
 
   func planTask(task: TaskViewModel, plan: Bool = true) {
@@ -162,15 +211,28 @@ struct TaskViewModel: Identifiable {
   }
 
   var image: String {
-    return task.image ?? "defaultTaskImage"
+    if task.image == "" || task.image == " " || (task.image == nil) {
+      return "dummyImage"
+    }
+
+    let imageExists: Bool = UIImage(named: task.image ?? "") != nil
+    if !imageExists { return "dummyImage" }
+
+    return task.image ?? "dummyImage"
   }
 
   var detail: String {
-    return task.detail ?? "There ar currently no details"
+    if task.detail == "" || task.detail == " " || (task.detail == nil) {
+      return "There ar currently no details..."
+    }
+    return task.detail ?? "There ar currently no details..."
   }
 
   var location: String {
-    return task.location ?? ""
+    if task.location == "" || task.location == " " || (task.location == nil) {
+      return ""
+    }
+    return task.image ?? ""
   }
 
   var reviewed: Bool {
