@@ -42,7 +42,9 @@ struct HomeView: View {
         ScrollView(showsIndicators: false) {
           VStack(spacing: 0) {
             ForEach(tlvm.cardRecs) { cardRec in
-              HomeCardView(task: cardRec)
+              NavigationLink(destination: ActivityDetailView(task: cardRec).navigationBarBackButtonHidden(true)) {
+                HomeCardView(task: cardRec)
+              }
             }
 
           }.padding(.horizontal)
