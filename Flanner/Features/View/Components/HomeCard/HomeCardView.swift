@@ -26,10 +26,15 @@ struct HomeCardView: View {
   var body: some View {
     HStack(spacing: 16) {
       // Image
-      Image(task.image).resizable().frame(width: 100, height: 100)
-        .cornerRadius(16).scaledToFill()
+      Image(task.image)
+        .resizable()
+        .scaledToFill()
+        .frame(width: 100, height: 100)
+        .clipped()
+        .cornerRadius(16)
         .padding(.vertical, 8)
         .padding(.leading, 16)
+
       // Info
       VStack(alignment: .leading) {
         Text(task.name).font(
@@ -64,4 +69,3 @@ struct HomeCardView_Previews: PreviewProvider {
     HomeView(um: UserManager())
   }
 }
-

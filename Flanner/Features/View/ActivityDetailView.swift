@@ -15,75 +15,86 @@ struct ActivityDetailView: View {
   var body: some View {
     VStack {
       ZStack {
-        Image(task.image)
+        // MARK: IMAGE
 
         VStack {
-          Spacer()
-          Rectangle().foregroundColor(.white)
-            .frame(width: .infinity, height: 300)
+          Image(task.image)
+            .resizable()
+            .scaledToFill()
+            .frame(width: 500, height: 500)
+            .clipped()
             .edgesIgnoringSafeArea(.all)
+          Spacer()
         }
+
+        // MARK: GRADIENT
 
         VStack(spacing: 0) {
           Color.black.opacity(0.6)
-            .frame(height: 90, alignment: .top).padding(0)
+            .frame(height: 120, alignment: .top).padding(0)
           LinearGradient(
             colors: [.black.opacity(0.6), .black.opacity(0)], startPoint: .topLeading, endPoint: .bottomLeading
           )
           .frame(height: 50, alignment: .top)
           Spacer()
-        }
+        }.padding(.top, 12)
+
+        // MARK: CONTENT
+
+        Spacer()
+        VStack {
+          Spacer()
+          Rectangle()
+            .foregroundColor(.white)
+            .frame(height: 600)
+            .cornerRadius(40)
+            .overlay(
+              VStack(alignment: .leading, spacing: 10) {
+                Text(task.name)
+                  .font(.system(size: 24, weight: .bold))
+                HStack {
+                  ForEach(task.tags) {
+                    tag in Text("\(tag.emoji ?? "🔘") \(tag.name ?? "Tag")")
+                      .font(.system(size: 12, weight: .light))
+                      .padding(6)
+                      .overlay(
+                        RoundedRectangle(cornerRadius: 4)
+                          .stroke(Color(hex: tag.color ?? "d9d9d9"), lineWidth: 1.5)
+                      )
+                  }
+                }
+
+                ScrollView {
+                  Text(task.detail)
+                    .lineSpacing(5)
+                    .font(.system(size: 14, weight: .regular))
+                }.frame(height: 240)
+                Spacer()
+              }
+              .padding(EdgeInsets(top: 30, leading: 25, bottom: 30, trailing: 25))
+            )
+        }.frame(width: 400).padding(.top, 450)
 
       }.ignoresSafeArea()
-        .frame(height: 300)
 
-      Spacer()
-      Rectangle()
-        .foregroundColor(.white)
-        .cornerRadius(40)
-        .overlay(
-          VStack(alignment: .leading, spacing: 10) {
-            Text(task.name)
-              .font(.system(size: 24, weight: .bold))
-            HStack {
-              ForEach(task.tags) {
-                tag in Text("\(tag.emoji ?? "🔘") \(tag.name ?? "Tag")")
-                  .font(.system(size: 12, weight: .light))
-                  .padding(6)
-                  .overlay(
-                    RoundedRectangle(cornerRadius: 4)
-                      .stroke(Color(hex: tag.color ?? "d9d9d9"), lineWidth: 1.5)
-                  )
-              }
-            }
+      // MARK: BUTTONS
 
-            ScrollView {
-              Text(task.detail)
-                .lineSpacing(5)
-                .font(.system(size: 14, weight: .regular))
-            }.frame(maxHeight: 180)
+      HStack {
+        Spacer()
+        Button {
+          // MARK: Make Task as Planned
 
-            HStack {
-              Spacer()
-              Button {
-                // MARK: Make Task as Planned
-
-                task.task.planned = true
-                print("SET PLANNED of  \(task.name) to \(task.planned)")
-                dismiss()
-              }
-                label: {
-                CustomButton(label: "Wishlist", width: 250)
-              }
-              Spacer()
-            }
-            .frame(height: 32)
-            .padding(.top, 16)
-            .padding(.bottom, -12)
-            .background(.white)
-          }
-          .padding(EdgeInsets(top: 30, leading: 25, bottom: 30, trailing: 25))
-        )
+          task.task.planned = true
+          print("SET PLANNED of  \(task.name) to \(task.planned)")
+          dismiss()
+        }
+      label: {
+          CustomButton(label: "Wishlist", width: 250)
+        }
+        Spacer()
+      }.frame(height: 32)
+        .background(.white)
+        .padding(.top, -250)
     }
     .navigationBarTitleDisplayMode(.inline)
     .toolbar {
