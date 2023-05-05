@@ -99,7 +99,7 @@ public let taskSeeds = [
            img: "photoHunting", loc: "", tagNames: ["Outdoor", "Art"]),
   taskSeed(name: "Car Theater",
            detail: "Looking for a fun and unique activity? Consider watching a movie under the stars is a great way to enjoy a classic film or new release with your family while enjoying the great outdoors.\nYour family can choose from a variety of outdoor movie events, including screenings at parks, drive-in theaters, or even in your own backyard. Bring along blankets, pillows, and snacks for a cozy and comfortable experience. ",
-           img: "", loc: "", tagNames: ["Outdoor", "Movie", "Private"]),
+           img: "carTheater", loc: "", tagNames: ["Outdoor", "Movie", "Private"]),
   taskSeed(name: "Picnic with Music",
            detail: "Looking for a peaceful and enjoyable activity? Consider having a picnic with music! A picnic is a great way to enjoy the outdoors and spend quality time with your family, while music can provide the perfect backdrop to your relaxing afternoon.\nYour family can choose a scenic location in a park or nature, and bring along a picnic blanket and basket filled with your favorite foods and drinks.",
            img: "picnicWithMusic", loc: "", tagNames: ["Outdoor", "Music", "Nature"]),
@@ -112,6 +112,27 @@ public let taskSeeds = [
   taskSeed(name: "Rock Climbing",
            detail: "Consider indoor rock climbing! Indoor rock climbing is a fun and exciting way to get some exercise and enjoy some adventure with your family.\nYour family can choose from a variety of rock climbing routes, ranging from easy and beginner-friendly to more challenging and advanced. You can work together as a team, cheering each other on and offering support and encouragement, as you scale new heights and conquer new challenges.",
            img: "", loc: "", tagNames: ["Indoor", "Sport"]),
+
+  taskSeed(name: "Baking Studio",
+           detail: "Looking for a fun and delicious activity? Consider taking a baking class at a studio together! Baking classes are a great way to learn new skills and techniques, while also enjoying some sweet treats with your family.\nYour family can choose from a variety of baking studios and classes, from beginner-level classes to more advanced courses. You can learn how to make a variety of baked goods, from cakes and cupcakes to bread and pastries.",
+           img: "bakingStudio", loc: "", tagNames: ["Indoor", "Food"]),
+  
+  
+  taskSeed(name: "Cooking Class",
+           detail: "Looking for a fun and educational activity? Consider taking a cooking class together! Cooking classes are a great way to learn new culinary skills and techniques, while also enjoying some delicious food with your family.\nYour family can choose from a variety of cooking classes, ranging from basic knife skills to advanced gourmet cooking. You can learn how to cook a variety of cuisines, from Indonesian, or Western to Asian and Middle Eastern.",
+           img: "cookingClass", loc: "", tagNames: ["Indoor", "Food"]),
+
+  taskSeed(name: "Pottery",
+           detail: "Looking for a unique and enriching activity? Consider taking a poetry class together! Poetry is a beautiful form of expression, and taking a class with your family can be a great way to explore new ideas, build vocabulary, and improve communication skills.\nYour family can choose from a variety of poetry classes, from beginner to advanced, and explore different styles and techniques. You can learn about the history of poetry, analyze famous poems, and even write and share your own poems with each other.",
+           img: "pottery", loc: "", tagNames: ["Indoor", "Art"]),
+  
+  taskSeed(name: "Biking",
+           detail: "Looking for an exciting and healthy activity? Consider biking! Biking is a great way to get outside, explore your surroundings, and spend quality time with your family.\nYou can easily discover new biking trails, plan your route, and schedule your biking adventure. You can also use the app to track your progress, monitor the weather, and even get tips and advice from other bikers.",
+           img: "biking", loc: "", tagNames: ["Outdoor", "Nature","Art"]),
+  
+  taskSeed(name: "Paintball",
+           detail: "Looking for an action-packed and adrenaline-fueled activity with your family? Paintball is an exciting game that combines strategy, teamwork, and friendly competition, making it a perfect choice for a thrilling family outing.\nYour family can gear up with paintball masks, markers, and protective gear before venturing into an outdoor paintball field. You'll have the chance to test your skills, work together as a team, and enjoy an exhilarating experience together.",
+           img: "paintball", loc: "", tagNames: ["Outdoor", "Sport","Adrenaline"]),
 
 //  taskSeed(name: "Pho",
 //           detail: "",

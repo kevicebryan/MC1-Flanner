@@ -23,9 +23,16 @@ struct PlandBridgeView: View {
         VStack {
           Spacer()
 
-          Prompt.planBridgeImage
-            .resizable()
-            .frame(width: 279, height: 279)
+          ZStack {
+            Circle()
+              .fill(Colors.turqTint).frame(width: 280, height: 280)
+            Circle()
+              .fill(Colors.lBlue).frame(width: 200, height: 200)
+            Prompt.planBridgeImage
+              .resizable()
+              .frame(width: 279, height: 279)
+          }.frame(width: 279, height: 279)
+
           Text("Let’s Plan Your Activity!")
             .font(.title)
             .fontWeight(.bold)
