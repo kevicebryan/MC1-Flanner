@@ -13,8 +13,8 @@ struct CarouselCard: View {
   var body: some View {
     ZStack {
       Colors.turqShade
-      Image(task.image).resizable().scaledToFill()
 
+      Image(task.image).resizable().scaledToFill()
       VStack(spacing: 0) {
         Spacer()
         LinearGradient(colors: [.black.opacity(0.85), .black.opacity(0.75), .black.opacity(0.2), .white.opacity(0)], startPoint: .bottom, endPoint: .top).frame(height: 80).padding(.bottom, 12)
@@ -22,7 +22,9 @@ struct CarouselCard: View {
 
       VStack(alignment: .leading) {
         Spacer()
-        Text(task.name).foregroundColor(Colors.creamTint).fontWeight(.bold).font(.largeTitle).lineLimit(1)
+        NavigationLink(destination: ActivityDetailView(task: task).navigationBarBackButtonHidden(true)) {
+          Text(task.name).foregroundColor(Colors.creamTint).fontWeight(.bold).font(.largeTitle).lineLimit(1)
+        }
         if task.location != "" && !task.location.isEmpty {
           Text(task.location).foregroundColor(Colors.creamTint).fontWeight(.regular).font(.caption)
         }

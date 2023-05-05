@@ -34,14 +34,15 @@ struct HomeCardView: View {
       VStack(alignment: .leading) {
         Text(task.name).font(
           title.count >= 12 ? .title2 : .title
-        ).fontWeight(.bold)
-        Text(task.detail).opacity(0.6).fontWeight(.light).font(.caption2).lineLimit(3, reservesSpace: true)
+        ).fontWeight(.bold).foregroundColor(.black)
+        Text(task.detail).opacity(0.6).fontWeight(.light).font(.caption2).lineLimit(3, reservesSpace: true).multilineTextAlignment(.leading).foregroundColor(.gray)
         HStack {
           ForEach(task.tags) { tag in
 
             Text("\(tag.emoji ?? "🔘") \(tag.name ?? "")")
               .font(.system(size: 9))
               .fontWeight(.light)
+              .foregroundColor(.black)
               .padding(.horizontal, 3)
               .padding(.vertical, 2)
               .overlay {
@@ -63,3 +64,4 @@ struct HomeCardView_Previews: PreviewProvider {
     HomeView(um: UserManager())
   }
 }
+
