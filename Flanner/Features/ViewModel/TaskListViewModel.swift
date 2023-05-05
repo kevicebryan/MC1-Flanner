@@ -107,6 +107,13 @@ class TaskListViewModel: ObservableObject {
         break
       }
     }
+    
+    if plans.isEmpty{
+      plans.append(tasks.randomElement()!)
+      plans.append(tasks.randomElement()!)
+      plans.append(tasks.randomElement()!)
+    }
+    
     return plans
   }
 
