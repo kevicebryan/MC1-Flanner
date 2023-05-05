@@ -68,16 +68,30 @@ struct DoneActivitiesView: View {
                 .fontWeight(.bold)
                 
                 Text(record.name)
-                    .opacity(0.6).fontWeight(.light)
+                    .opacity(0.6)
+                    .fontWeight(.light)
                     .font(.caption2)
                     .lineLimit(3, reservesSpace: true)
-                Button { isReviweing = true } label: { HStack {
-                    Text("Review")
-                        .foregroundColor(Colors.turq)
-                    Image(systemName: "arrow.right.circle")
-                        .foregroundColor(Colors.turq)
+                
+                if record.task.reviewed == false {
+                    Button { isReviweing = true } label: { HStack {
+                        Text("Review")
+                            .foregroundColor(Colors.turq)
+                        Image(systemName: "arrow.right.circle")
+                            .foregroundColor(Colors.turq)
+                        }
+                    }
+                } else {
+                    Button { isReviweing = true } label: { HStack {
+                        Image(systemName: "checkmark.circle")
+                            .foregroundColor(Colors.turq)
+                        Text("Reviewed")
+                            .foregroundColor(Colors.turq)
+                        }
+                    }.disabled(true)
                 }
-                }
+                    
+                
             }
             .padding(.all, 8)
             .padding(.leading, -16)

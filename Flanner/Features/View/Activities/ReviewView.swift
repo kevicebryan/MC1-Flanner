@@ -70,7 +70,7 @@ struct ReviewView: View {
                             .foregroundColor(Colors.black)
                             .font(.system(size: 14))
                         
-                    }
+                    }.opacity(button1Opacity)
                 }.disabled(!isReviewed)
                 
                 Button(action: {
@@ -90,7 +90,7 @@ struct ReviewView: View {
                             .fontWeight(.medium)
                             .foregroundColor(Colors.black)
                             .font(.system(size: 14))
-                    }
+                    }.opacity(button2Opacity)
                 }.disabled(!isReviewed)
                 
                 Button(action: {
@@ -100,7 +100,7 @@ struct ReviewView: View {
                     isReviewed = false
                 }) {
                     VStack {
-                        Text("🥰\nEnjoy")
+                        Text("🥰")
                             .font(.system(size: 55))
                             .frame(width: 79, height: 79)
                             .foregroundColor(Color.black)
@@ -110,7 +110,7 @@ struct ReviewView: View {
                             .fontWeight(.medium)
                             .foregroundColor(Colors.black)
                             .font(.system(size: 14))
-                    }
+                    }.opacity(button3Opacity)
                 }.disabled(!isReviewed)
             }
             Spacer()

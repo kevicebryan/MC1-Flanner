@@ -33,14 +33,14 @@ struct ActivitiesView: View {
                         ForEach(tlvm.plannedTasks, id: \.self.id) { task in
                             WishlistView(record: task)
                         }
-                    }
+                    }.ignoresSafeArea()
                     
                 } else {
                     ScrollView {
                         ForEach(tlvm.doneTasks, id: \.self.id) { task in
                             DoneActivitiesView(record: task, isReviewed: .constant(false))
                         }
-                    }
+                    }.ignoresSafeArea()
                 }
                 Spacer()
             }
