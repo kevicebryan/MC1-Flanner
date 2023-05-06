@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ActivityDetailView: View {
   let task: TaskViewModel
+  @StateObject var tlvm = TaskListViewModel()
 
   @Environment(\.dismiss) private var dismiss
 
@@ -85,6 +86,7 @@ struct ActivityDetailView: View {
           // MARK: Make Task as Planned
 
           task.task.planned = true
+          tlvm.saveToCoreData()
           print("SET PLANNED of  \(task.name) to \(task.planned)")
           dismiss()
         }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ResultView: View {
+  @StateObject var tlvm = TaskListViewModel()
   @Binding var showView: Bool
   @Binding var isAnswering: Bool
   @State var currIdx = 0
@@ -115,9 +116,11 @@ struct ResultView: View {
           .frame(width: 50, height: 48)
           Button {
             // MARK: Make Task as Planned
-              isAnswering.toggle()
-              showView.toggle()
+
+            isAnswering.toggle()
+            showView.toggle()
             plans[currIdx].task.planned = true
+            tlvm.saveToCoreData()
             print("SET PLANNED of  \(plans[currIdx].name) to \(plans[currIdx].planned)")
 //            dismiss()
           }
