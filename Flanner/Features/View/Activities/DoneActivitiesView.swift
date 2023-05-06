@@ -43,7 +43,8 @@ struct DoneActivitiesView: View {
               showingAlert = true
               record.task.reviewed = true
               record.task.planned = false
-              TaskListViewModel().getAllTask()
+              tlvm.saveToCoreData()
+              tlvm.getAllTask()
             }) {
               CustomButton(label: "Submit", width: 280, isDisabled: isReviewed)
                 .alert(isPresented: $showingAlert) {

@@ -42,6 +42,7 @@ struct WishlistView: View {
           self.isChecked.toggle()
           record.task.done = true
           record.task.planned = false
+          tlvm.saveToCoreData()
           tlvm.getAllTask()
         }
       Spacer()

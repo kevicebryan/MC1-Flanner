@@ -29,6 +29,10 @@ class TaskListViewModel: ObservableObject {
     }
   }
 
+  func saveToCoreData() {
+    CoreDataManager.shared.save()
+  }
+
   func refreshAllTask() {
     getAllTask()
     getRecommendations()
@@ -107,13 +111,13 @@ class TaskListViewModel: ObservableObject {
         break
       }
     }
-    
-    if plans.isEmpty{
+
+    if plans.isEmpty {
       plans.append(tasks.randomElement()!)
       plans.append(tasks.randomElement()!)
       plans.append(tasks.randomElement()!)
     }
-    
+
     return plans
   }
 
