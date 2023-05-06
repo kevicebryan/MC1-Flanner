@@ -140,11 +140,11 @@
 		2D21D2AB29EFB3C6001B7416 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0A45E23B2A025080003E93BA /* Activities */,
 				2D90E86529FEA966002868B1 /* MainView.swift */,
 				2D90D31A29FBCFD000108975 /* ContentView.swift */,
 				2DA9376029F0316E0057DD82 /* HomeView.swift */,
 				2D8C85FC2A03FF5B00339EE3 /* ActivityDetailView.swift */,
+				0A45E23B2A025080003E93BA /* Activities */,
 				2D438CB72A014248006024E3 /* Plan */,
 				2D90E86D29FEACD5002868B1 /* Onboarding */,
 				2D56DA7329EE913F00002EE4 /* Components */,
