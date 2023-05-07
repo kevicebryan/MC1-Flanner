@@ -63,6 +63,7 @@ class TaskListViewModel: ObservableObject {
       }
       print("RATED \(taskTag.name ?? "ERR") : \(taskTag.weight)")
       task.task.reviewed = true
+      saveToCoreData()
     }
   }
 
