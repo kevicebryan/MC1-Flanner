@@ -30,7 +30,7 @@ struct ActivitiesView: View {
         if index == 0 {
           ScrollView {
             ForEach(tlvm.plannedTasks, id: \.self.id) { task in
-              WishlistView(tlvm: tlvm, record: task)
+                WishlistView(tlvm: tlvm, record: task)
             }
           }.ignoresSafeArea()
 

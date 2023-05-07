@@ -58,21 +58,28 @@ struct DoneActivitiesView: View {
     }
         
     HStack(spacing: 16) {
-      Image(record.image).resizable().frame(width: 90, height: 90)
-        .cornerRadius(16).scaledToFill()
-        .padding(.vertical, 8)
-        .padding(.leading, 16)
+      Image(record.image)
+            .resizable()
+            .scaledToFill()
+            .frame(width: 100, height: 100)
+            .clipped()
+            .cornerRadius(16)
+            .padding(.vertical, 8)
+            .padding(.leading, 16)
+        
       VStack(alignment: .leading) {
         Text(record.name).font(
           record.name.count >= 12 ? .title2 : .title
-        )
-        .fontWeight(.bold)
+        ).fontWeight(.bold)
+              .lineLimit(1, reservesSpace: true)
                 
-        Text(record.name)
-          .opacity(0.6)
-          .fontWeight(.light)
-          .font(.caption2)
-          .lineLimit(3, reservesSpace: true)
+          Text(record.detail)
+              .opacity(0.6)
+              .fontWeight(.light)
+              .font(.caption2)
+              .lineLimit(2, reservesSpace: true)
+              .multilineTextAlignment(.leading)
+              .foregroundColor(.gray)
                 
         if record.task.reviewed == false {
           Button { isReviweing = true } label: { HStack {
@@ -80,15 +87,15 @@ struct DoneActivitiesView: View {
               .foregroundColor(Colors.turq)
             Image(systemName: "arrow.right.circle")
               .foregroundColor(Colors.turq)
-          }
+            }.padding(.top, 2)
           }
         } else {
           Button { isReviweing = true } label: { HStack {
             Image(systemName: "checkmark.circle")
-              .foregroundColor(Colors.turq)
+              .foregroundColor(Colors.darkGray)
             Text("Reviewed")
-              .foregroundColor(Colors.turq)
-          }
+              .foregroundColor(Colors.darkGray)
+            }.padding(.top, 2)
           }.disabled(true)
         }
       }
@@ -97,7 +104,8 @@ struct DoneActivitiesView: View {
       .frame(width: 195)
             
       Spacer()
-    }.background(.white).cornerRadius(20).frame(width: 360, height: 116)
+    }.background(.white).cornerRadius(20)
+          .frame(width: 360, height: 116)
       .shadow(color: Color.black.opacity(0.05), radius: 20, x: 0, y: 20)
   }
 }

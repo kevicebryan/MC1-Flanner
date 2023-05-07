@@ -15,24 +15,32 @@ struct WishlistView: View {
   var body: some View {
     HStack(spacing: 16) {
       Image(record.image)
-        .resizable()
-        .frame(width: 90, height: 90)
-        .cornerRadius(16)
-        .scaledToFill()
-        .padding(.vertical, 8)
-        .padding(.leading, 16)
+            .resizable()
+            .scaledToFill()
+            .frame(width: 100, height: 100)
+            .clipped()
+            .cornerRadius(16)
+            .padding(.vertical, 8)
+            .padding(.leading, 16)
+        
       VStack(alignment: .leading) {
         Text(record.name).font(
           record.name.count >= 12 ? .title2 : .title
         ).fontWeight(.bold)
-        Text(record.name)
-          .opacity(0.6)
-          .fontWeight(.light)
-          .font(.caption2)
-          .lineLimit(3, reservesSpace: true)
+        .lineLimit(1, reservesSpace: true)
+          
+          Text(record.detail)
+              .opacity(0.6)
+              .fontWeight(.light)
+              .font(.caption2)
+              .lineLimit(2, reservesSpace: true)
+              .multilineTextAlignment(.leading)
+              .foregroundColor(.gray)
+          
       }.padding(.all, 8)
         .padding(.leading, -16)
         .frame(width: 180)
+        
 
       Image(systemName: isChecked ? "checkmark.square" : "square")
         .resizable()
@@ -48,13 +56,14 @@ struct WishlistView: View {
       Spacer()
     }.background(.white)
       .cornerRadius(20)
-      .frame(width: 315, height: 116)
+      .frame(width: 360, height: 116)
       .shadow(color: Color.black.opacity(0.05), radius: 20, x: 0, y: 20)
   }
 }
 
 struct WishlistView_Previews: PreviewProvider {
   static var previews: some View {
-    WishlistView(tlvm: TaskListViewModel(), record: TaskListViewModel().tasks[0])
+      WishlistView(tlvm: TaskListViewModel(), record: TaskListViewModel().tasks[0]
+      )
   }
 }
